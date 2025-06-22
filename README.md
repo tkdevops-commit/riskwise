@@ -6,7 +6,7 @@ A management assessment tool used for making better decisions by assessing actua
 Features:
 
 Evaluate actual vs. perceived riskk
-Incoproate opportunity cost in decision making
+Incorporate opportunity cost in decision making
 Quantitative output for risk assessment
 Simple design
 
