@@ -12,5 +12,6 @@ Simple design
 
 Tech stack:
 ?
+python 3
 
 
