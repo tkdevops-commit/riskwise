@@ -13,7 +13,8 @@ Features:
 
 Tech stack:
 ?
-python 3
+python 
+?? next.js & D3?
 
 Framework:
 Flask
