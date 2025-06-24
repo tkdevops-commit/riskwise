@@ -11,6 +11,24 @@ Features:
 - Optimising strategic decisions based on competitor choices
 - Simple and easy design
 
+Forumulas 
+Actual 
+AR = POE * IOE
+
+Perecieved
+PR = PP * PI
+
+Measure the gap difference
+Gap = AR - PR
+
+Quualitative scenarios
+{Perceived Risk Score} = (P_s) \times (I_s) \times (F_h) \times (F_c)
+Where:
+	•	P_s: Subjective Probability Score (1–5)
+	•	I_s: Subjective Impact Score (1–5)
+	•	F_h: Heuristic Factors (familiarity, media coverage, trust, etc.)
+	•	F_c: Contextual Factors (power dynamics, org culture, org objectivs)
+
 Tech stack:
 ?
 python 
