@@ -27,7 +27,7 @@ Where:
 	•	P_s: Subjective Probability Score (1–5)
 	•	I_s: Subjective Impact Score (1–5)
 	•	F_h: Heuristic Factors (familiarity, media coverage, trust, brand etc.)
-	•	F_c: Contextual Factors (power dynamics, org culture, org objectivs, resource allocation)
+	•	F_c: Contextual Factors (power dynamics, org culture, org objectivs, resource allocation.)
 
 Tech stack:
 ?
