@@ -8,7 +8,7 @@ Features:
 - Evaluate actual vs. perceived risk
 - Incorporate opportunity cost in decision making
 - Quantitative output for risk assessment
-- Optimising strategic decisions based on competitor choices
+- Optimising strategic decisions based on competitor choices 
 - Simple and easy design
 
 Forumulas 
