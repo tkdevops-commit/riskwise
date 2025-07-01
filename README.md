@@ -11,7 +11,8 @@ Features:
 - Analyse trade-offs and opportunity costs
 - Quantitative output for risk assessment
 - Optimising strategic decisions based on competitor choices 
-- Exploring if risk can be leveraged to support business activities and meet organisational objectives
+- Exploring if risk can be leveraged to support business activities and meet organisational objectives within governance frameworks
+
 
 
 Forumulas 
