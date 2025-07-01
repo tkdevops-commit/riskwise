@@ -40,6 +40,7 @@ Terms:
 Nash equilibrium
 Competitive
 Non-competitive 
+Social choice and incentive problems
 
 
 
