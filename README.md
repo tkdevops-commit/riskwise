@@ -1,15 +1,18 @@
 # riskwise
 Risk assessment multi criteria tool
 
-A management assessment tool used for making better decisions by assessing actual vs. perceived risk, evaluating the opportunity cost and ones own decisions against competitors. This project is design for individuals, business, management and teams that want lightweight structured way to assess and compare options based on risk dynamics, assisting with decision making leveraging digital tool in enhancing clearer decisions and comparing positions and competitve advatage based on game theory. This is a useful tool that is able to assist the user through a guided practical approach incorporating economic theories. 
+A strategic, lightweight and structured decision-support tool designed to help individual, teams and organisations make clearer and cleaner choices by applying core economic principals. It enables users to idenitfy and catergorise risk, access actual vs. perceived risk, evaluate opportunity costs, and analyse decisions within a competitive landscape using game theory analysis. 
 
 Features:
 
+- Identify classes of risk
 - Evaluate actual vs. perceived risk
 - Incorporate opportunity cost in decision making
+- Analyse trade-offs and opportunity costs
 - Quantitative output for risk assessment
 - Optimising strategic decisions based on competitor choices 
-- Simple and easy design
+- Exploring if risk can be leveraged to support business activities and meet organisational objectives
+
 
 Forumulas 
 Actual 
