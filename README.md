@@ -37,6 +37,19 @@ Where:
 
 Game Theory
 
+Pay-off used where there are fixed players, limit amount of strategic choices and finite games.
+
+
+Player B: Hold
+Player B: Pass
+Player A: Hold
+(3, 3)
+(0, 5)
+Player A: Pass
+(5, 0)
+(1, 1)
+
+
 Terms:
 Nash equilibrium
 Competitive
