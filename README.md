@@ -1,7 +1,7 @@
 # riskwise
 Risk assessment multi criteria tool
 
-A strategic, lightweight and structured decision-support tool designed to help individual, teams and organisations make clearer and cleaner choices by applying core economic principals. It enables users to idenitfy and catergorise risk, access actual vs. perceived risk, evaluate opportunity costs, and analyse decisions within a competitive landscape using game theory analysis. 
+A strategic, lightweight and structured decision-support tool designed to help individual, teams and organisations make clearer and cleaner choices by applying core economic principals. It enables users to idenitfy and catergorise risk, assess actual vs. perceived risk, evaluate opportunity costs, and analyse decisions within a competitive landscape using game theory analysis. 
 
 Features:
 
