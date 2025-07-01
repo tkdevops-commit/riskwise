@@ -43,11 +43,11 @@ Pay-off used where there are fixed players, limit amount of strategic choices an
 Player B: Hold
 Player B: Pass
 Player A: Hold
-(3, 3)
-(0, 5)
+(value, Value)
+(Value, Value)
 Player A: Pass
-(5, 0)
-(1, 1)
+(Value, Value)
+(Value, Value)
 
 
 Terms:
