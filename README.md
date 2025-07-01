@@ -32,7 +32,7 @@ Where:
 	•	F_h: Heuristic Factors (familiarity, media coverage, trust, brand etc.)
 	•	F_c: Contextual Factors (power dynamics, org culture, org objectivs, resource allocation.)
 
-Opportunity cost = What is given up over what is gained
+
 
 Game Theory
 
