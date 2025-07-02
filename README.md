@@ -12,6 +12,7 @@ Features:
 - Quantitative output for risk assessment
 - Optimising strategic decisions based on competitor choices 
 - Exploring if risk can be leveraged to support business activities and meet organisational objectives within governance frameworks
+- Are actions taken to mitigate risk inadvertently increasing risk exposure
 
 
 
@@ -52,6 +53,16 @@ Player A: Pass
 
 Terms:
 Nash equilibrium
+Let:
+	•	S_i: Strategy set for player i
+	•	u_i(s_1, s_2, …, s_n): Payoff for player i given the strategy profile (s_1, …, s_n)
+
+A strategy profile (s_1^, …, s_n^) is a Nash Equilibrium if:
+
+\forall i, \forall s_i \in S_i: \quad u_i(s_i^, s_{-i}^) \geq u_i(s_i, s_{-i}^*)
+
+Meaning: Player i cannot improve their payoff by switching to any other strategy s_i, given that the other players stick to s_{-i}^*
+
 Competitive
 Non-competitive 
 Social choice and incentive problems
