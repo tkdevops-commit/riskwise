@@ -1,81 +1,69 @@
-# riskwise
-Risk assessment multi criteria tool
+#RiskWise – Multi-Criteria Risk Assessment & Strategic Decision Tool
 
-A strategic, lightweight and structured decision-support tool designed to help individual, teams and organisations make clearer and cleaner choices by applying core economic principals. It enables users to idenitfy and catergorise risk, assess actual vs. perceived risk, evaluate opportunity costs, and analyse decisions within a competitive landscape using game theory analysis. 
+Overview
+RiskWise is a strategic, lightweight, and structured decision-support tool designed to help individuals, teams, and organizations make clearer, more confident choices. Grounded in core economic principles, it enables users to identify and categorize risk, assess actual vs. perceived risk, evaluate opportunity costs, and apply game theory to analyze decisions in competitive environments.
 
-Features:
+⸻
 
-- Identify classes of risk
-- Evaluate actual vs. perceived risk
-- Incorporate opportunity cost in decision making
-- Analyse trade-offs and opportunity costs
-- Quantitative output for risk assessment
-- Optimising strategic decisions based on competitor choices 
-- Exploring if risk can be leveraged to support business activities and meet organisational objectives within governance frameworks
-- Are actions taken to mitigate risk inadvertently increasing risk exposure
+Key Features
 
+🧠 Risk Analysis
+	•	Identify and classify different types of risk
+	•	Compare actual vs. perceived risk to reveal decision bias
+	•	Measure the gap between rational and intuitive risk responses
+	•	Determine whether risk mitigation strategies may inadvertently increase exposure
 
+💡 Opportunity Cost Evaluation
+	•	Quantify trade-offs to support resource allocation decisions
+	•	Integrate opportunity cost into risk and reward analysis
+	•	Support strategic prioritization in line with organizational objectives
 
-Forumulas 
-Actual 
-AR = POE * IOE
+🎯 Strategic & Competitive Intelligence
+	•	Use game theory to model and anticipate competitor or stakeholder decisions
+	•	Evaluate finite games with fixed players and limited strategic choices
+	•	Analyze Nash Equilibria to determine optimal responses
+	•	Explore non-competitive and social-choice scenarios
 
-Perecieved
-PR = PP * PI
+📊 Quantitative Output
+	•	Provide measurable outputs to support governance, compliance, and board-level reporting
+	•	Enable scenario-based qualitative assessments
 
-Measure the gap difference
-Gap = AR - PR
+⸻
 
-Quualitative scenarios
-{Perceived Risk Score} = (P_s) \times (I_s) \times (F_h) \times (F_c)
+Formulas & Frameworks
+
+1. Quantitative Risk Scores
+	•	Actual Risk (AR):
+AR = POE × IOE
+(Probability of Event × Impact of Event)
+	•	Perceived Risk (PR):
+PR = PP × PI
+(Perceived Probability × Perceived Impact)
+	•	Gap Analysis:
+Gap = AR – PR
+(Difference between actual and perceived risk)
+
+⸻
+
+2. Qualitative Scenario Model
+
+Perceived Risk Score
+PRS = (P_s × I_s × F_h × F_c)
 Where:
 	•	P_s: Subjective Probability Score (1–5)
 	•	I_s: Subjective Impact Score (1–5)
-	•	F_h: Heuristic Factors (familiarity, media coverage, trust, brand etc.)
-	•	F_c: Contextual Factors (power dynamics, org culture, org objectivs, resource allocation.)
+	•	F_h: Heuristic Factors (e.g., familiarity, media, trust, brand)
+	•	F_c: Contextual Factors (e.g., power dynamics, culture, resources)
 
+⸻
 
+3. Game Theory Framework
 
-Game Theory
+Used when:
+	•	Fixed number of players
+	•	Limited strategy sets
+	•	Finite outcomes
 
-Pay-off used where there are fixed players, limit amount of strategic choices and finite games.
-
-
-Player B: Hold
-Player B: Pass
-Player A: Hold
-(value, Value)
-(Value, Value)
-Player A: Pass
-(Value, Value)
-(Value, Value)
-
-
-Terms:
-Nash equilibrium
-Let:
-	•	S_i: Strategy set for player i
-	•	u_i(s_1, s_2, …, s_n): Payoff for player i given the strategy profile (s_1, …, s_n)
-
-A strategy profile (s_1^, …, s_n^) is a Nash Equilibrium if:
-
-\forall i, \forall s_i \in S_i: \quad u_i(s_i^, s_{-i}^) \geq u_i(s_i, s_{-i}^*)
-
-Meaning: Player i cannot improve their payoff by switching to any other strategy s_i, given that the other players stick to s_{-i}^*
-
-Competitive
-Non-competitive 
-Social choice and incentive problems
-
-
-
-Tech stack:
-?
-python 
-?? next.js & D3??
-
-Framework:
-Flask
 
 
 
