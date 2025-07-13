@@ -15,7 +15,7 @@ Key Features
 
 💡 Opportunity Cost Evaluation
 	•	Quantify trade-offs to support resource allocation decisions
-	•	Integrate opportunity cost into risk and reward analysis
+	•	Integrate opportunity cost into riskk and reward analysis
 	•	Support strategic prioritization in line with organizational objectives
 
 🎯 Strategic & Competitive Intelligence
@@ -63,6 +63,18 @@ Used when:
 	•	Fixed number of players
 	•	Limited strategy sets
 	•	Finite outcomes
+
+Nash Equilibrium Definition
+A strategy profile (s₁*, …, sₙ*) is a Nash Equuilibrium if:
+
+∀ i, ∀ sᵢ ∈ Sᵢ:  uᵢ(sᵢ*, s₋ᵢ*) ≥ uᵢ(sᵢ, s₋ᵢ*)
+*This means no player can improve their payoff by unilaterally changing strategy.
+
+Tech Stack (Proposed)
+	•	Frontend: Next.js + D3.js (for dynamic, interactive data visualization)
+	•	Backend: Python (risk engine, logic, simulations)
+	•	Optional: Flask or FastAPI (API layer), PostgreSQL (storage for scenarios), Pandas/Numpy (data ops)?
+
 
 
 
