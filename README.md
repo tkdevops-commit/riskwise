@@ -1,11 +1,11 @@
 #RiskWise – Multi-Criteria Risk Assessment & Strategic Decision Tool
 
-Overview
+Overview:
 RiskWise is a strategic, lightweight, and structured decision-support tool designed to help individuals, teams, and organizations make clearer, more confident choices. Grounded in core economic principles, it enables users to identify and categorize risk, assess actual vs. perceived risk, evaluate opportunity costs, and apply game theory to analyze decisions in competitive environments.
 
 ⸻
 
-Key Features
+Key Features:
 
 🧠 Risk Analysis
 	•	Identify and classify different types of risk
@@ -69,6 +69,8 @@ A strategy profile (s₁*, …, sₙ*) is a Nash Equuilibrium if:
 
 ∀ i, ∀ sᵢ ∈ Sᵢ:  uᵢ(sᵢ*, s₋ᵢ*) ≥ uᵢ(sᵢ, s₋ᵢ*)
 *This means no player can improve their payoff by unilaterally changing strategy.
+
+-----
 
 Tech Stack (Proposed)
 	•	Frontend: Next.js + D3.js (for dynamic, interactive data visualization)
