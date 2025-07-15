@@ -43,6 +43,15 @@ PR = PP × PI
 Gap = AR – PR
 (Difference between actual and perceived risk)
 
+## ▶️ How to Run
+
+To run this project, use:
+
+1. Save risk_score_calculator.py
+
+2. In your terminal:
+   	python risk_score_calculator.py
+
 ⸻
 
 2. Qualitative Scenario Model
