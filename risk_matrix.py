@@ -32,7 +32,7 @@ ax.set_xlabel("Severity of Impact")
 ax.set_ylabel("Likelihood of Occurrence")
 plt.title("Risk Assessment Matrix")
 
-# Add coloourbar
+# Add colorbar
 fig.colorbar(cax, label="Risk Score")
 
 plt.tight_layout()
