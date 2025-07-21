@@ -43,6 +43,10 @@ PR = PP × PI
 Gap = AR – PR
 (Difference between actual and perceived risk)
 
+2. 🧮 Risk = Likelihood × Consequence
+	•	Likelihood: How probable it is that the event will occur (e.g. Rare, Unlikely, Possible, Likely, Almost Certain)
+	•	Consequence (or Severity): How serious the impact would be (e.g. Minor, Moderate, Major, Critical, Catastrophic)
+
 ## ▶️ How to Run
 
 To run this project, use:
