@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🧠 Risk Analysis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <section id="intro">
+      <h1>🧠 Risk Analysis Tool</h1>
+      <p>Understand how you assess risk—objectively and intuitively.</p>
+      <button onclick="startQuiz()">Start Risk Assessment</button>
+    </section>
+
+    <section id="quiz" style="display: none;">
+      <p id="question-text"></p>
+      <div id="options"></div>
+      <button onclick="nextQuestion()">Next</button>
+    </section>
+
+    <section id="results" style="display: none;">
+      <h2>📝 Your Risk Summary</h2>
+      <div id="summary-container"></div>
+    </section>
+  </div>
+
+  <script src="risk-quiz.js"></script>
+</body>
+</html>
