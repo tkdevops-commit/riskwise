@@ -46,6 +46,14 @@ Gap = AR – PR
 2. Risk = Likelihood × Consequence
 	•	Likelihood: How probable it is that the event will occur (e.g. Rare, Unlikely, Possible, Likely, Almost Certain)
 	•	Consequence (or Severity): How serious the impact would be (e.g. Minor, Moderate, Major, Critical, Catastrophic)
+Process:
+1. Identify - Is there uncertainty in the situation? Are ther potential threats?
+2. Analyse - Is this actual risk or percieved risk? 
+3. Assess - Rating scale the level and secerity of risk.
+4. Caluclate - Map the risk on the risk maxtrix to its corrosponding score
+5. Evaluate - Measure the risk and solution in a broader context. Regulatory requirements, strategic alignment etc.
+7. Develop - Implentations in-house, external. Risk avoidence comonents.
+8. Monitor and Review - Updates, environmental change etc.
 
 ## ▶️ How to Run
 
