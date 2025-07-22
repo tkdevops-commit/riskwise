@@ -12,7 +12,7 @@ Tools under considerations:
     5. Business Impact Analysis
 	6. Scenario Planning 
  
- REF: https://www.youtube.com/watch?v=DLl--A0gV3w & https://github.com/ncase/trust
+
 
 
      
