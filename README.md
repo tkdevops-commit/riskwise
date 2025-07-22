@@ -10,6 +10,7 @@ Tools under considerations:
   	3. SWOT Analysis
    	4. FMEA
     	5. Business Impact Analysis
+     
 
 ⸻
 
