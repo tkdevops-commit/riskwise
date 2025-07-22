@@ -46,7 +46,8 @@ Gap = AR – PR
 2. Risk = Likelihood × Consequence
 	•	Likelihood: How probable it is that the event will occur (e.g. Rare, Unlikely, Possible, Likely, Almost Certain)
 	•	Consequence (or Severity): How serious the impact would be (e.g. Minor, Moderate, Major, Critical, Catastrophic)
-	Process:
+	
+ Purpose and process:
 		1. Identify - Is there uncertainty in the situation? Are ther potential threats?
 		2. Analyse - Is this actual risk or percieved risk? 
 		3. Assess - Rating scale the level and secerity of risk.
