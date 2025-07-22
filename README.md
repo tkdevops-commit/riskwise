@@ -48,13 +48,13 @@ Gap = AR – PR
 	•	Consequence (or Severity): How serious the impact would be (e.g. Minor, Moderate, Major, Critical, Catastrophic)
 	
  Purpose and process:
-		1. Identify - Is there uncertainty in the situation? Are ther potential threats?
+		1. Identify - Is there uncertainty in the situation? Are there potential threats?
 		2. Analyse - Is this actual risk or percieved risk? 
 		3. Assess - Rating scale the level and secerity of risk.
 		4. Caluclate - Map the risk on the risk maxtrix to its corrosponding score
 		5. Evaluate - Measure the risk and solution in a broader context. Regulatory requirements, strategic alignment etc.
-		7. Develop - Implentations in-house, external. Risk avoidence comonents.
-		8. Monitor and Review - Updates, environmental change etc.
+		7. Develop - Implementation stage - in-house, sourcing externally. Risk avoidence components.
+		8. Monitor and Review - Updates, environmental change, objective completion etc.
 
 ## ▶️ How to Run
 
