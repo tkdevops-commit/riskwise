@@ -10,7 +10,7 @@ Tools under considerations:
   	3. SWOT Analysis
    	4. FMEA
     5. Business Impact Analysis
-	6. Scenario Planning (ref https://www.youtube.com/watch?v=DLl--A0gV3w)
+	6. Scenario Planning (ref https://www.youtube.com/watch?v=DLl--A0gV3w & https://github.com/ncase/trust)
 
 
      
