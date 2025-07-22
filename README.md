@@ -9,8 +9,8 @@ Tools under considerations:
  	2. PEST Analysis
   	3. SWOT Analysis
    	4. FMEA
-    	5. Business Impact Analysis
-     	6. Scenario Planning (ref https://www.youtube.com/watch?v=DLl--A0gV3w)
+    5. Business Impact Analysis
+	6. Scenario Planning (ref https://www.youtube.com/watch?v=DLl--A0gV3w)
 
 
      
