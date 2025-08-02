@@ -3,7 +3,7 @@
 Overview:
 RiskWise is a strategic, lightweight, and structured decision-support tool designed to help individuals, teams, and organizations make clearer, more confident choices. Grounded in core economic principles, it enables users to identify and categorize risk, assess actual vs. perceived risk, evaluate opportunity costs, and apply game theory to analyze decisions in competitive environments. This is a experimental concept which aims to combine economic principals and business practise into a functional single use app. 
 
-Tools under considerations:
+Tools under consideration:
 
 1. Risk Matrix: Determine the severity of risk. 
 2. PEST Analysis: Examine the political, economical, social and techonological environments.
@@ -11,10 +11,10 @@ Political: Two predominant factors to consider 1. Political stability and 2. Deg
 Economic: Domestic economic policies, trade agreements, disposable income, FDI, consumer confidence, interest rates and inflation.
 Social: Skilled labour force, umemployment levels, culture and consumer behaviour, digital literacy, mobility.
 Technological: RnD, supporting infrustructure, tech ecosystems.
-3. SWOT Analysis: Determine the organisations internal and external advantages and disadvantages. (Category prefix and numbering?) 
+3. SWOT Analysis: Determine the organisations internal and external advantages and disadvantage, seek oppprtunities and manage risk. (Category prefix and numbering?) 
 4. Business Impact Analysis: Assess the impact of disruption.
 5. Scenario Planning: Contigency planning.
-6. Fmea: Determine possible points of failures. 
+6. FMEA: Determine possible points of failures. 
  
 
 
