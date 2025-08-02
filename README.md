@@ -7,7 +7,7 @@ Tools under considerations:
 
 	1. Risk Matrix: Determine the severity of risk. 
  	2. PEST Analysis: Examine the political, economical, social and techonological environments.(Would require external data sources for real time data) 
-  	3. SWOT Analysis: Determine the organisations internatal and external advantages and disadvantages. (Category prefix and numbering?) 
+  	3. SWOT Analysis: Determine the organisations internal and external advantages and disadvantages. (Category prefix and numbering?) 
     5. Business Impact Analysis: Assess the impact of disruption.
 	6. Scenario Planning: Contigency planning.
  	7. Fmea: Determine possible points of failures. 
