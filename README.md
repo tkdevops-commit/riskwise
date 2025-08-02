@@ -10,7 +10,7 @@ Tools under considerations:
   	3. SWOT Analysis: Determine the organisations internatal and external advantages and disadvantages. (Category prefix and numbering?) 
     5. Business Impact Analysis: access the impact of disruption 
 	6. Scenario Planning: Contigency planning.
- 	7.Fmea: Determine possible points of fractures. 
+ 	7. Fmea: Determine possible points of fractures. 
  
 
 
