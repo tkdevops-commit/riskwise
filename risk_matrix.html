@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Risk Matrix</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    .cell {
+      stroke: #999;
+      stroke-width: 1px;
+    }
+
+    .label {
+      font-weight: bold;
+      text-anchor: middle;
+    }
+
+    .matrix-label {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Risk Assessment Matrix</h2>
+  <svg id="riskMatrix" width="600" height="500"></svg>
+
+  <script>
+    const severity = ['Very Low', 'Low', 'Moderate', 'High', 'Extreme'];
+    const likelihood = ['Rare', 'Unlikely', 'Possible', 'Likely', 'Almost Certain'];
+
+    const riskMatrix = [
+      [1, 2, 3, 4, 5],
+      [2, 4, 6, 8, 10],
+      [3, 6, 9, 12, 15],
+      [4, 8, 12, 16, 20],
+      [5, 10, 15, 20, 25]
+    ];
+
+    const width = 500, height = 500;
+    const cellSize = width / severity.length;
+
+    const svg = d3.select("#riskMatrix")
+      .attr("width", width + 100)
+      .attr("height", height + 100);
+
+    const color = d3.scaleLinear()
+      .domain([1, 25])
+      .range(["#fff5f0", "#cb181d"]);
+
+    // Draw cells
+    svg.selectAll("g.cell")
+      .data(riskMatrix.flat())
+      .enter()
+      .append("rect")
+      .attr("class", "cell")
+      .attr("x", (d, i) => (i % 5) * cellSize + 80)
+      .attr("y", (d, i) => Math.floor(i / 5) * cellSize + 30)
+      .attr("width", cellSize)
+      .attr("height", cellSize)
+      .attr("fill", d => color(d));
+
+    // Add cell text
+    svg.selectAll("g.text")
+      .data(riskMatrix.flat())
+      .enter()
+      .append("text")
+      .attr("x", (d, i) => (i % 5) * cellSize + 80 + cellSize / 2)
+      .attr("y", (d, i) => Math.floor(i / 5) * cellSize + 30 + cellSize / 2 + 5)
+      .attr("text-anchor", "middle")
+      .attr("fill", "#000")
+      .text(d => d);
+
+    // Add x-axis labels (severity)
+    severity.forEach((label, i) => {
+      svg.append("text")
+        .attr("class", "matrix-label")
+        .attr("x", i * cellSize + 80 + cellSize / 2)
+        .attr("y", 20)
+        .attr("text-anchor", "middle")
+        .text(label);
+    });
+
+    // Add y-axis labels (likelihood)
+    likelihood.forEach((label, i) => {
+      svg.append("text")
+        .attr("class", "matrix-label")
+        .attr("x", 70)
+        .attr("y", i * cellSize + 30 + cellSize / 2 + 5)
+        .attr("text-anchor", "end")
+        .text(label);
+    });
+
+    // Add axis titles
+    svg.append("text")
+      .attr("x", width / 2 + 80)
+      .attr("y", height + 60)
+      .attr("text-anchor", "middle")
+      .style("font-weight", "bold")
+      .text("Severity of Impact");
+
+    svg.append("text")
+      .attr("transform", `translate(20,${height / 2 + 30}) rotate(-90)`)
+      .attr("text-anchor", "middle")
+      .style("font-weight", "bold")
+      .text("Likelihood of Occurrence");
+  </script>
+</body>
+</html>
