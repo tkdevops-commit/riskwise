@@ -10,7 +10,7 @@ Tools under considerations:
   	3. SWOT Analysis: Determine the organisations internatal and external advantages and disadvantages. 
     5. Business Impact Analysis: access the impact of disruption 
 	6. Scenario Planning: Contigency planning.
- 	7.Fema/Nema: National emergency response emeregency framwork
+ 	7.Fmea: Determine possible points of fractures. 
  
 
 
