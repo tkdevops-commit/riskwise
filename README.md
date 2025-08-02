@@ -6,7 +6,7 @@ RiskWise is a strategic, lightweight, and structured decision-support tool desig
 Tools under considerations:
 
 	1. Risk Matrix: Determine the severity of risk. 
- 	2. PEST Analysis: Examine the political, economical, social and techonological environments.(Would require external data sources for real time data)
+ 	2. PEST Analysis: Examine the political, economical, social and techonological environments.
   	Political: Two predominant factors to consider 1. Political stability and 2. Degree of government intervention
   	Economic: Domestic economic policies, trade agreements, disposable income, FDI, consumer confidence, interest rates and inflation.
   	Social: Skilled labour force, umemployment levels, culture and consumer behaviour, digital literacy, mobility.
