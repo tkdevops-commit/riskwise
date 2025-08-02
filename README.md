@@ -5,7 +5,7 @@ RiskWise is a strategic, lightweight, and structured decision-support tool desig
 
 Tools under considerations:
 
-	1. Risk Matrix: Determine the sverity of risk
+	1. Risk Matrix: Determine the sverity of risk. 
  	2. PEST Analysis: Examine the political, economical, social and techonological environments.
   	3. SWOT Analysis: Determine the organisations internatal and external advantages and disadvantages. 
     5. Business Impact Analysis: access the impact of disruption 
