@@ -7,10 +7,10 @@ Tools under considerations:
 
 	1. Risk Matrix: Determine the severity of risk. 
  	2. PEST Analysis: Examine the political, economical, social and techonological environments.(Would require external data sources for real time data)
-  Political: Two predominant factors to consider 1. Political stability and 2. Degree of government intervention
-  Economic: Domestic economic policies, trade agreements, disposable income, FDI, consumer confidence, interest rates and inflation.
-  Social: Skilled labour force, umemployment levels, culture and consumer behaviour, digital literacy, mobility.
-  Technological: RnD, supporting infrustructure, tech ecosystems.
+  	Political: Two predominant factors to consider 1. Political stability and 2. Degree of government intervention
+  	Economic: Domestic economic policies, trade agreements, disposable income, FDI, consumer confidence, interest rates and inflation.
+  	Social: Skilled labour force, umemployment levels, culture and consumer behaviour, digital literacy, mobility.
+  	Technological: RnD, supporting infrustructure, tech ecosystems.
   	3. SWOT Analysis: Determine the organisations internal and external advantages and disadvantages. (Category prefix and numbering?) 
     5. Business Impact Analysis: Assess the impact of disruption.
 	6. Scenario Planning: Contigency planning.
