@@ -76,10 +76,34 @@ Gap = AR – PR
 
   3. PEST Analysis:
 Poltitical
-     Political stability: A) Determining the strength of instituitions B) Frequency of power transitions C) Level of corruption.
-     	A) Can institutions operate without interference? Degree of public trusts in institutions? Are there protections for judical independence? Recources - Laws on FOI, OECD surveys, wellbeing framweworks, bahviours during crisis - case studies, existence of anti-corruption bodies, senate hearing reviews.
+	Political stability: A) Determining the strength of instituitions B) Frequency of power transitions C) Levels of corruption.
+     	A) Can institutions operate without interference? Degree of public trusts in institutions? Are there protections for independence? 
+	Governemtent intervention: A) Economic intervention - Taxation, tariffs, privitisation etc B) Regulatory intervention - compliance requirements, anti-trust laws, IR statutes etc
 
-     Governemtent intervention: A) Economic intervention - Taxation, tariffs, privitisation etc B) Regulatory intervention - compliance requirements, monopoly controls, IR statuts etc
+In determining the Political aspect programmatically, there will be combination of indicators, scoring systems and real-tiime data sources.
+Political Factor
+How to Measure (Metric / Source)
+Political Stability
+World Bank Political Stability Index, Fragile States Index, Global Peace Index
+Corruption
+Transparency International’s Corruption Perceptions Index (CPI)
+Government Effectiveness
+World Bank Government Effectiveness Indicator (part of Worldwide Governance Indicators)
+Regulatory Quality
+World Bank Regulatory Quality Index
+Rule of Law
+World Justice Project Rule of Law Index
+Ease of Doing Business
+World Bank’s (historical) or Heritage Economic Freedom Index
+Freedom of the Press
+Reporters Without Borders – World Press Freedom Index
+Government Intervention
+Fraser Institute’s Economic Freedom Index or case-based flags (e.g. subsidies, nationalisation)
+Bureaucracy / Red Tape
+World Bank data + business climate reports (OECD, IMF)
+Recent Policy Changes or Reforms
+Scraped from government websites or real-time feeds (e.g. legal databases, news APIs)
+
 
        
 
