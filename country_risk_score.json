@@ -1,8 +1,51 @@
 {
   "country": "Australia",
-  "political_stability": 85,
-  "corruption_index": 78,
-  "government_effectiveness": 81,
-  "press_freedom": 65,
-  "regulatory_quality": 79
+  "political": {
+    "stability": {
+      "score": 82,
+      "source": "World Bank Political Stability Index",
+      "last_updated": "2024-12-31"
+    },
+    "corruption": {
+      "score": 75,
+      "source": "Transparency International CPI",
+      "last_updated": "2024-12-31"
+    },
+    "government_effectiveness": {
+      "score": 79,
+      "source": "World Bank Governance Indicators",
+      "last_updated": "2024-12-31"
+    },
+    "regulatory_quality": {
+      "score": 77,
+      "source": "World Bank Regulatory Quality Index",
+      "last_updated": "2024-12-31"
+    },
+    "rule_of_law": {
+      "score": 80,
+      "source": "World Justice Project Rule of Law Index",
+      "last_updated": "2024-12-31"
+    },
+    "press_freedom": {
+      "score": 68,
+      "source": "World Press Freedom Index",
+      "last_updated": "2024-12-31"
+    },
+    "government_intervention": {
+      "score": 62,
+      "source": "Fraser Institute Economic Freedom Index",
+      "note": "Lower score = higher intervention",
+      "last_updated": "2024-12-31"
+    },
+    "bureaucracy": {
+      "score": 70,
+      "source": "OECD Business Climate Report",
+      "last_updated": "2024-12-31"
+    },
+    "policy_reform_activity": {
+      "score": 3,
+      "source": "Scraped API: gov.au/legislation",
+      "note": "Number of significant policy changes in the past 12 months"
+    }
+  }
 }
