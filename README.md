@@ -74,6 +74,15 @@ Gap = AR – PR
 		7. Develop - Implementation stage - in-house, sourcing externally. Risk avoidence components.
 		8. Monitor and Review - Updates, environmental change, objective completion etc.
 
+  3. PEST Analysis:
+Poltitical
+     Political stability: A) Determining the strength of instituitions B) Frequency of power transitions C) Level of corruption.
+     	A) Can institutions operate without interference? Degree of public trusts in institutions? Are there protections for judical independence? Recources - Laws on FOI, OECD surveys, wellbeing framweworks, bahviours during crisis - case studies, existence of anti-corruption bodies, senate hearing estimates and budgetory needs.
+
+     Governemtent intervention: A) Economic intervention - Taxation, tariffs, privitisation etc B) Regulatory intervention - compliance requirements, monopoly controls, IR statuts etc
+
+       
+
 ## ▶️ How to Run
 
 To run this project, use:
