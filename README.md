@@ -15,9 +15,6 @@ Technological: RnD, supporting infrustructure, tech ecosystems.
 4. Business Impact Analysis: Assess the impact of disruption.
 5. Scenario Planning: Contigency planning.
 6. FMEA: Determine possible points of failures. 
- 
-
-
 
      
 
@@ -104,7 +101,10 @@ World Bank data + business climate reports (OECD, IMF)
 Recent Policy Changes or Reforms
 Scraped from government websites or real-time feeds (e.g. legal databases, news APIs)
 
-
+1. Used recognised scores from glable indices -refer json file.
+2. Intergrate data feeds:
+   Governance indicators
+   Scrape government press releases API's
        
 
 ## ▶️ How to Run
