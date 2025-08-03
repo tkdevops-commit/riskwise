@@ -1,1 +1,75 @@
+PEST Analysis 
+
+PEST Analysis is a strategic tool used to assess the macro-environmental factors
+ 
+Political
+
+Two predominant areas of focus:
+1.	Political Stability
+2.	Degree of Government Intervention
+
+1. Political Stability
+
+To evaluate political stability, consider:
+•	Strength of institutions: Can they operate independently of political interference?
+•	Frequency of power transitions: Are elections regular, peaceful, and respected?
+•	Corruption levels: What is the public’s trust in political institutions? Are protections for independence in place?
+
+2. Government Intervention
+
+Assess both economic and regulatory intervention:
+•	Economic intervention: Includes taxation policies, tariffs, subsidies, privatisation/nationalisation.
+•	Regulatory intervention: Includes compliance obligations, anti-trust laws, labour/industrial relations legislation, and market entry controls.
+ 
+Economic
+
+Evaluate core indicators such as:
+•	Domestic economic policy settings
+•	Trade agreements and openness
+•	Disposable income and cost of living
+•	Foreign Direct Investment (FDI)
+•	Consumer confidence
+•	Interest rates and inflation trends
+ 
+Social
+
+Focus on workforce and societal trends:
+•	Availability of a skilled labour force
+•	Unemployment and underemployment rates
+•	Cultural attitudes and consumer behaviours
+•	Digital literacy and education levels
+•	Mobility and urbanisation
+ 
+Technological
+
+Assess how well innovation and infrastructure are supported:
+•	Research and Development (R&D) output and funding
+•	Supporting infrastructure (e.g. internet, logistics, energy)
+•	Presence and maturity of local tech ecosystems
+•	National investment in emerging technologies
+ 
+Programmatic Assessment of Political Factors
+
+To evaluate political stability and intervention programmatically, combine recognised global indicators, scoring systems, and real-time data sources.
+
+
+Political Factor	How to Measure (Metric / Source)
+Political Stability	World Bank Political Stability Index, Fragile States Index, Global Peace Index
+Corruption	Transparency International’s Corruption Perceptions Index (CPI)
+Government Effectiveness	World Bank Government Effectiveness Indicator (Worldwide Governance Indicators)
+Regulatory Quality	World Bank Regulatory Quality Index
+Rule of Law	World Justice Project Rule of Law Index
+Ease of Doing Business	World Bank (historical) or Heritage Foundation’s Economic Freedom Index
+Freedom of the Press	Reporters Without Borders – World Press Freedom Index
+Government Intervention	Fraser Institute’s Economic Freedom Index; policy analysis (e.g. subsidies, nationalisation flags)
+Bureaucracy / Red Tape	World Bank reports, OECD, IMF business environment indicators
+Policy Change or Reform	Scraped from official government websites, gazettes, or policy feeds via APIs and legal databases
+
+Implementation Tips for App
+1.	Use recognised global indices (scored 0–100 or 0–10) to build a composite political score.
+→ Refer to a structured .json file for each country/region.
+2.	Integrate real-time data feeds:
+o	Use governance indicators (e.g. World Bank APIs)
+o	Scrape press releases or policy bulletins from official government websites
+o	Monitor law or regulation databases using NLP where applicable
 
