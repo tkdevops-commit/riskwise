@@ -39,7 +39,7 @@ Risk analysis tools and frameworks:
 
 ⸻
 
-Formulas & Frameworks
+Formulas 
 
 1. Quantitative Risk Scores
 	•	Actual Risk (AR):
