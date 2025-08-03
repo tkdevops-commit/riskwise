@@ -77,7 +77,7 @@ Gap = AR – PR
   3. PEST Analysis:
 Poltitical
      Political stability: A) Determining the strength of instituitions B) Frequency of power transitions C) Level of corruption.
-     	A) Can institutions operate without interference? Degree of public trusts in institutions? Are there protections for judical independence? Recources - Laws on FOI, OECD surveys, wellbeing framweworks, bahviours during crisis - case studies, existence of anti-corruption bodies, senate hearing estimates and budgetory needs.
+     	A) Can institutions operate without interference? Degree of public trusts in institutions? Are there protections for judical independence? Recources - Laws on FOI, OECD surveys, wellbeing framweworks, bahviours during crisis - case studies, existence of anti-corruption bodies, senate hearing reviews.
 
      Governemtent intervention: A) Economic intervention - Taxation, tariffs, privitisation etc B) Regulatory intervention - compliance requirements, monopoly controls, IR statuts etc
 
