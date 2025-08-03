@@ -1,51 +1,149 @@
 {
   "country": "Australia",
-  "political": {
-    "stability": {
-      "score": 82,
-      "source": "World Bank Political Stability Index",
-      "last_updated": "2024-12-31"
+  "last_updated": "2025-08-01",
+  "pest": {
+    "political": {
+      "stability": {
+        "score": 82,
+        "source": "World Bank Political Stability Index",
+        "last_updated": "2024-12-31"
+      },
+      "corruption": {
+        "score": 75,
+        "source": "Transparency International CPI",
+        "last_updated": "2024-12-31"
+      },
+      "government_effectiveness": {
+        "score": 79,
+        "source": "World Bank Governance Indicators",
+        "last_updated": "2024-12-31"
+      },
+      "regulatory_quality": {
+        "score": 77,
+        "source": "World Bank Regulatory Quality Index",
+        "last_updated": "2024-12-31"
+      },
+      "rule_of_law": {
+        "score": 80,
+        "source": "World Justice Project Rule of Law Index",
+        "last_updated": "2024-12-31"
+      },
+      "press_freedom": {
+        "score": 68,
+        "source": "World Press Freedom Index",
+        "last_updated": "2024-12-31"
+      },
+      "government_intervention": {
+        "score": 62,
+        "source": "Fraser Institute Economic Freedom Index",
+        "note": "Lower score = higher intervention",
+        "last_updated": "2024-12-31"
+      },
+      "bureaucracy": {
+        "score": 70,
+        "source": "OECD Business Climate Report",
+        "last_updated": "2024-12-31"
+      },
+      "policy_reform_activity": {
+        "score": 3,
+        "source": "Scraped API: gov.au/legislation",
+        "note": "Number of significant policy changes in the past 12 months"
+      }
     },
-    "corruption": {
-      "score": 75,
-      "source": "Transparency International CPI",
-      "last_updated": "2024-12-31"
+    "economic": {
+      "gdp_growth": {
+        "score": 2.1,
+        "unit": "%",
+        "source": "World Bank",
+        "last_updated": "2025-06-30"
+      },
+      "interest_rate": {
+        "score": 4.35,
+        "unit": "%",
+        "source": "Reserve Bank of Australia",
+        "last_updated": "2025-06-01"
+      },
+      "inflation_rate": {
+        "score": 3.2,
+        "unit": "%",
+        "source": "ABS",
+        "last_updated": "2025-06-30"
+      },
+      "unemployment_rate": {
+        "score": 4.1,
+        "unit": "%",
+        "source": "ABS",
+        "last_updated": "2025-07-15"
+      },
+      "consumer_confidence_index": {
+        "score": 104,
+        "source": "Westpac-Melbourne Institute",
+        "last_updated": "2025-07-01"
+      },
+      "fdi_net_inflows": {
+        "score": 48000,
+        "unit": "million USD",
+        "source": "World Bank",
+        "last_updated": "2024-12-31"
+      }
     },
-    "government_effectiveness": {
-      "score": 79,
-      "source": "World Bank Governance Indicators",
-      "last_updated": "2024-12-31"
+    "social": {
+      "digital_literacy": {
+        "score": 85,
+        "source": "Australian Digital Inclusion Index",
+        "last_updated": "2024-10-01"
+      },
+      "labour_force_skill": {
+        "score": 79,
+        "source": "OECD Skills Outlook",
+        "last_updated": "2024-12-31"
+      },
+      "unemployment_youth": {
+        "score": 9.8,
+        "unit": "%",
+        "source": "ABS",
+        "last_updated": "2025-07-15"
+      },
+      "cultural_diversity_index": {
+        "score": 72,
+        "source": "Australian Bureau of Statistics",
+        "last_updated": "2025-01-01"
+      },
+      "urban_mobility_index": {
+        "score": 81,
+        "source": "INRIX Global Traffic Scorecard",
+        "last_updated": "2025-06-30"
+      }
     },
-    "regulatory_quality": {
-      "score": 77,
-      "source": "World Bank Regulatory Quality Index",
-      "last_updated": "2024-12-31"
-    },
-    "rule_of_law": {
-      "score": 80,
-      "source": "World Justice Project Rule of Law Index",
-      "last_updated": "2024-12-31"
-    },
-    "press_freedom": {
-      "score": 68,
-      "source": "World Press Freedom Index",
-      "last_updated": "2024-12-31"
-    },
-    "government_intervention": {
-      "score": 62,
-      "source": "Fraser Institute Economic Freedom Index",
-      "note": "Lower score = higher intervention",
-      "last_updated": "2024-12-31"
-    },
-    "bureaucracy": {
-      "score": 70,
-      "source": "OECD Business Climate Report",
-      "last_updated": "2024-12-31"
-    },
-    "policy_reform_activity": {
-      "score": 3,
-      "source": "Scraped API: gov.au/legislation",
-      "note": "Number of significant policy changes in the past 12 months"
+    "technological": {
+      "r_and_d_expenditure": {
+        "score": 2.1,
+        "unit": "% of GDP",
+        "source": "OECD R&D Statistics",
+        "last_updated": "2024-12-31"
+      },
+      "broadband_penetration": {
+        "score": 93,
+        "unit": "%",
+        "source": "ACMA",
+        "last_updated": "2025-06-01"
+      },
+      "tech_infrastructure_index": {
+        "score": 80,
+        "source": "World Economic Forum",
+        "last_updated": "2025-01-01"
+      },
+      "startup_ecosystem_strength": {
+        "score": 76,
+        "source": "StartupBlink Global Index",
+        "last_updated": "2025-01-01"
+      },
+      "ai_policy_activity": {
+        "score": 4,
+        "note": "Number of national AI strategies/policy changes in past 12 months",
+        "source": "Gov.au AI Taskforce",
+        "last_updated": "2025-07-01"
+      }
     }
   }
 }
