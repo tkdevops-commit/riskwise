@@ -68,7 +68,7 @@ Implementation Tips for App
 1.	Use recognised global indices (scored 0–100 or 0–10) to build a composite political score.
 → Refer to a structured .json file for each country/region.
 2.	Integrate real-time data feeds:
-o	Use governance indicators (e.g. World Bank APIs)
-o	Scrape press releases or policy bulletins from official government websites
-o	Monitor law or regulation databases using NLP where applicable
+3.	Use governance indicators (e.g. World Bank APIs)
+4.	Scrape press releases or policy bulletins from official government websites
+5.	Monitor law or regulation databases using NLP where applicable
 
