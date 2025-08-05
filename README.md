@@ -30,7 +30,7 @@ Risk analysis tools and frameworks:
 🎯 Strategic & Competitive Intelligence
 	•	Use game theory to model and anticipate competitor or stakeholder decisions
 	•	Evaluate finite games with fixed players and limited strategic choices
-	•	Analyze Nash Equilibria to determine optimal responses
+	•	Analyse Nash Equilibrium to determine optimal responses
 	•	Explore non-competitive and social-choice scenarios
 
 📊 Quantitative Output
