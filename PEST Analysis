@@ -53,15 +53,15 @@ Programmatic Assessment of Political Factors
 To evaluate PEST programmatically, combine recognised global indicators, scoring systems, and real-time data sources.
 
 
-- Political Factor	How to Measure (Metric / Source)
-- Political Stability	World Bank Political Stability Index, Fragile States Index, Global Peace Index
-- Corruption	Transparency International’s Corruption Perceptions Index (CPI)
-- Government Effectiveness	World Bank Government Effectiveness Indicator (Worldwide Governance Indicators)
-- Regulatory Quality	World Bank Regulatory Quality Index
-- Rule of Law	World Justice Project Rule of Law Index
-- Ease of Doing Business	World Bank (historical) or Heritage Foundation’s Economic Freedom Index
-- Freedom of the Press	Reporters Without Borders – World Press Freedom Index
-- Government Intervention	Fraser Institute’s Economic Freedom Index; policy analysis (e.g. subsidies, nationalisation flags)
+- Political Factor:	How to Measure (Metric / Source)
+- Political Stability:	World Bank Political Stability Index, Fragile States Index, Global Peace Index
+- Corruption	Transparency: International’s Corruption Perceptions Index (CPI)
+- Government Effectiveness:	World Bank Government Effectiveness Indicator (Worldwide Governance Indicators)
+- Regulatory Quality:	World Bank Regulatory Quality Index
+- Rule of Law:	World Justice Project Rule of Law Index
+- Ease of Doing Business:	World Bank (historical) or Heritage Foundation’s Economic Freedom Index
+- Freedom of the Press:	Reporters Without Borders – World Press Freedom Index
+- Government Intervention:	Fraser Institute’s Economic Freedom Index; policy analysis (e.g. subsidies, nationalisation flags)
 - Bureaucracy / Red Tape	World Bank reports, OECD, IMF business environment indicators
 - Policy Change or Reform	Scraped from official government websites, gazettes, or policy feeds via APIs and legal databases
 
