@@ -62,8 +62,8 @@ To evaluate PEST programmatically, combine recognised global indicators, scoring
 - Ease of Doing Business:	World Bank (historical) or Heritage Foundation’s Economic Freedom Index
 - Freedom of the Press:	Reporters Without Borders – World Press Freedom Index
 - Government Intervention:	Fraser Institute’s Economic Freedom Index; policy analysis (e.g. subsidies, nationalisation flags)
-- Bureaucracy / Red Tape	World Bank reports, OECD, IMF business environment indicators
-- Policy Change or Reform	Scraped from official government websites, gazettes, or policy feeds via APIs and legal databases
+- Bureaucracy: / Red Tape	World Bank reports, OECD, IMF business environment indicators
+- Policy Change or Reform:	Scraped from official government websites, gazettes, or policy feeds via APIs and legal databases
 
 Implementation Tips for App
 1.	Use recognised global indices (scored 0–100 or 0–10) to build a composite political score.
