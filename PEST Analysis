@@ -22,7 +22,12 @@ Assess both economic and regulatory intervention:
  
 Economic
 
-Evaluate core indicators such as:
+Evaluate core indicators, for algorthmtic simplicity a focussed on current state of the economy:
+• Unemployment rate - Partipation rates
+• GDP - measure the economic activity
+• Inflation rate - Stability of growth
+
+Evaluate other indicators such as:
 •	Domestic economic policy settings
 •	Trade agreements and openness
 •	Disposable income and cost of living
@@ -30,12 +35,13 @@ Evaluate core indicators such as:
 •	Consumer confidence
 •	Interest rates and inflation trends
 •	Market competition
+• Non-accelerating inflation rate of unemployment
+
  
 Social
 
 Focus on workforce and societal trends:
 •	Availability of a skilled labour force
-•	Unemployment and underemployment rates
 •	Cultural attitudes and consumer behaviours
 •	Digital literacy and education levels
 •	Mobility and urbanisation
@@ -47,6 +53,11 @@ Assess how well innovation and infrastructure are supported:
 •	Supporting infrastructure (e.g. internet, logistics, energy)
 •	Presence and maturity of local tech ecosystems
 •	National investment in emerging technologies
+
+Prediciting economic change and potential causal change of events:
+
+Tariffs -> change in cost -> output of production -> Employment and investment -> Consumer prices
+
  
 Programmatic Assessment of Political Factors
 
