@@ -21,6 +21,7 @@ Risk analysis tools and frameworks:
 4. Business Impact Analysis: Assess the impact of disruption.
 5. Scenario Planning: Contigency planning.
 6. FMEA: Determine possible points of failures.
+7. Cost-benefit Analysis
 
 💡 Opportunity Cost Evaluation
 	•	Quantify trade-offs to support resource allocation decisions
