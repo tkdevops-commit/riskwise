@@ -1,30 +1,73 @@
-1. Logistic Regression Model
+Logistic Regression Analysis for Probability Estimation
 
+📌 Overview
 
-We predict the probability p that an event occurs (e.g., success, “yes”, class 1):
+This project uses logistic regression to estimate the probability of events occurring based on structured and unstructured data, such as information scraped from government and industry sources.
 
-p = \frac{1}{1 + e^{-z}}
-
-Where:
-
-z = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_n x_n
-	•	p = predicted probability of the positive class
-	•	e = Euler’s number (~2.71828)
-	•	\beta_0 = intercept
-	•	\beta_i = coefficient for predictor x_i
+Logistic regression is a statistical method for binary classification — predicting whether something will happen (1) or not happen (0) — based on explanatory variables.
+Instead of producing direct “yes/no” outcomes, logistic regression outputs probabilities (0 to 1), allowing for more nuanced decision-making.
 
 ⸻
 
-2. Odds and Log-Odds
-	•	Odds:
-\text{Odds} = \frac{p}{1 - p}
-	•	Logit (log-odds):
-\log\left(\frac{p}{1 - p}\right) = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n
+🎯 Purpose
+
+This analysis aims to:
+	•	Transform raw data (e.g., from PEST analysis inputs) into usable features.
+	•	Train a logistic regression model to predict the likelihood of an event occurring.
+	•	Provide decision-makers with probabilistic insights rather than vague predictions.
+
+Example:
+	•	Using economic indicators from government reports to estimate the probability of a market downturn.
+	•	Using policy announcements to predict the likelihood of a regulatory change within a year.
 
 ⸻
 
-3. Inverse Formula (to get p from log-odds)
+⚙️ How It Works
 
-p = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \dots + \beta_n x_n)}}
+1. Data Collection (What)
+	•	Scrape relevant public data from government sites, reports, and APIs.
+	•	Clean, normalize, and structure the data into a feature set (numeric or categorical).
 
+2. Feature Engineering (Where)
+	•	Extract meaningful variables from PEST analysis factors:
+	•	Political: upcoming elections, policy changes.
+	•	Economic: interest rates, inflation, GDP trends.
+	•	Social: demographic shifts, consumer sentiment.
+	•	Technological: patent filings, innovation indices.
 
+3. Model Training (Why)
+	•	Train a logistic regression model on historical labeled data (events that happened vs. didn’t happen).
+	•	Learn the relationship between features and event likelihood.
+
+4. Prediction & Interpretation (How)
+	•	Input new or updated data into the model.
+	•	Receive probability scores for the event in question.
+	•	Use a probability threshold (e.g., >0.7) to classify as “likely.”
+
+Example workflow
+
+1. Data Input:
+
+interest_rate, gdp_growth, unemployment_rate, election_year, event_occurred
+3.0, 2.5, 4.1, 0, 1
+4.5, 1.2, 6.0, 1, 0
+
+2. Train Model:
+
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+3. Preddict:
+
+probability = model.predict_proba(new_data)[:, 1]
+
+4. Output:
+
+Probability of Event: 0.82 (Likely)
+
+📌 Notes & Limitations
+	•	Logistic regression assumes a linear relationship between features and the log-odds of the event.
+	•	Requires clean and relevant data for reliable predictions.
+	•	Not suitable for complex, highly non-linear problems (consider other models if performance is poor).
+	•	Outputs are probabilities, not certainties — they should guide, not dictate, decisions.
