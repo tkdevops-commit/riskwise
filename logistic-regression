@@ -71,3 +71,6 @@ Probability of Event: 0.82 (Likely)
 	•	Requires clean and relevant data for reliable predictions.
 	•	Not suitable for complex, highly non-linear problems (consider other models if performance is poor).
 	•	Outputs are probabilities, not certainties — they should guide, not dictate, decisions.
+
+
+*Set benchmarks where there is limited historical data
