@@ -1,9 +1,5 @@
 1. Logistic Regression Model
 
-Wht is it? A statistical method used to predict the probability of a binary outcome.
-
-
-
 
 We predict the probability p that an event occurs (e.g., success, “yes”, class 1):
 
