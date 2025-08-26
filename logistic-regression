@@ -83,4 +83,9 @@ Where:
 	•	X_1, X_2, \dots, X_n = input variables (the factors we use to predict).
 	•	e = Euler’s number (~2.718)
 
+Logistic regression threshold
+
+\text{If } P(Y=1) \geq 0.5 \text{ → Predict YES}
+\text{If } P(Y=1) < 0.5 \text{ → Predict NO}
+
 *Set benchmarks where there is limited historical data
