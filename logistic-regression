@@ -72,5 +72,15 @@ Probability of Event: 0.82 (Likely)
 	•	Not suitable for complex, highly non-linear problems (consider other models if performance is poor).
 	•	Outputs are probabilities, not certainties — they should guide, not dictate, decisions.
 
+Core forumula which predicts the probability within the function
+
+P(Y=1) = \frac{1}{1 + e^{-(b_0 + b_1X_1 + b_2X_2 + \dots + b_nX_n)}}
+
+Where:
+	•	P(Y=1) = probability of “YES” (the outcome happening).
+	•	b_0 = intercept (baseline).
+	•	b_1, b_2, \dots, b_n = weights (decided during training).
+	•	X_1, X_2, \dots, X_n = input variables (the factors we use to predict).
+	•	e = Euler’s number (~2.718)
 
 *Set benchmarks where there is limited historical data
