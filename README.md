@@ -1,7 +1,7 @@
 #RiskWise – Multi-Criteria Risk Assessment & Strategic Decision Tool
 
 Overview:
-RiskWise is a strategic, lightweight, and structured decision-support tool designed to help individuals, teams, and organizations make clearer, more confident choices. Grounded in core economic principles, it enables users to identify and categorise risk, assess actual vs. perceived risk, evaluate opportunity costs, and apply game theory to analyse decisions in competitive environments. This is a experimental concept which aims to combine economic principals and business practise into a functional single use app. 
+RiskWise is a strategic, lightweight, and structured decision-support tool designed to help individuals, teams, and organisations make clearer, more confident choices. Grounded in core economic principles, it enables users to identify and categorise risk, assess actual vs. perceived risk, evaluate opportunity costs, and apply game theory to analyse decisions in competitive environments. This is a experimental concept which aims to combine economic principals and business practise into a functional single use app. 
 
 ⸻
 
