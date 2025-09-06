@@ -11,9 +11,10 @@ Two predominant areas of focus:
 1. Political Stability
 
 To evaluate political stability, consider:
-•	A functioning Government?
-•	Strength of institutions: Can they operate independently of political interference?
-•	Frequency of power transitions: Are elections regular, peaceful, and respected?
+•	A functioning Government? Y/N
+•	Strength of institutions: Can they operate independently of political interference? Y/N
+•	Frequency of power transitions: Are elections regular, peaceful, and respected? Y/N
+
 
 2. Government Intervention
 
@@ -26,7 +27,8 @@ Assess both economic and regulatory intervention:
 Economic
 
 Evaluate core indicators, for algorthmtic simplicity a focussed on current state of the economy:
-• Unemployment rate - Partipation rates
+• Unemployment rate - Partipation rates - Natural rate to be used to calculate an healty range of unemployment. 
+Typical stable range for developed economies 3-5% and 6-8% for developing countires
 • GDP - measure the economic activity
 • Inflation rate - Stability of growth
 
@@ -50,6 +52,9 @@ Focus on workforce and societal trends:
 •	Cultural attitudes and consumer behaviours
 •	Digital literacy and education levels
 •	Mobility and urbanisation
+
+Corruption Perceptions Index - Ranks countries on scale of 0 - 100 based on business and expert assessments. 
+
 
 ---
  
