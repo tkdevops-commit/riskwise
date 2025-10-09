@@ -2,12 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Risk Matrix</title>
+  <title>Social Risk Management Matrix</title>
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background: #f9f9f9;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
     .cell {
       stroke: #999;
       stroke-width: 1px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .cell:hover {
+      transform: scale(1.05);
+      stroke-width: 2px;
     }
 
     .label {
@@ -17,17 +34,37 @@
 
     .matrix-label {
       font-size: 14px;
+      font-weight: bold;
+    }
+
+    .tooltip {
+      position: absolute;
+      text-align: center;
+      padding: 6px;
+      font-size: 13px;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      border-radius: 5px;
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
-  <h2>Risk Assessment Matrix</h2>
-  <svg id="riskMatrix" width="600" height="500"></svg>
+  <h2>Social Risk Management Matrix</h2>
+  <svg id="riskMatrix" width="700" height="550"></svg>
 
   <script>
-    const severity = ['Very Low', 'Low', 'Moderate', 'High', 'Extreme'];
-    const likelihood = ['Rare', 'Unlikely', 'Possible', 'Likely', 'Almost Certain'];
+    // Axes
+    const severity = [
+      'Minor Discontent',
+      'Disengagement',
+      'Internal Friction',
+      'Reputational Damage',
+      'Systemic Breakdown'
+    ];
+    const likelihood = ['Rare', 'Unlikely', 'Possible', 'Likely', 'Imminent'];
 
+    // 5x5 Matrix - risk scoring
     const riskMatrix = [
       [1, 2, 3, 4, 5],
       [2, 4, 6, 8, 10],
@@ -40,32 +77,59 @@
     const cellSize = width / severity.length;
 
     const svg = d3.select("#riskMatrix")
-      .attr("width", width + 100)
+      .attr("width", width + 150)
       .attr("height", height + 100);
 
-    const color = d3.scaleLinear()
-      .domain([1, 25])
-      .range(["#fff5f0", "#cb181d"]);
+    // Tooltip
+    const tooltip = d3.select("body")
+      .append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0);
+
+    // Color scale for low-high risk
+    const color = d3.scaleThreshold()
+      .domain([5, 10, 15, 20, 25])
+      .range(["#d4f7dc", "#fefcbf", "#fed7aa", "#fca5a5", "#b91c1c"]);
+
+    // Explanations for tooltips
+    const explanations = {
+      1: "Stable environment – low social tension.",
+      5: "Emerging signs of disengagement or gossip.",
+      10: "Moderate mistrust forming between groups.",
+      15: "High tension – potential morale breakdown.",
+      20: "Reputational risk – public exposure likely.",
+      25: "Systemic cultural failure – urgent intervention required."
+    };
 
     // Draw cells
-    svg.selectAll("g.cell")
+    svg.selectAll("rect.cell")
       .data(riskMatrix.flat())
       .enter()
       .append("rect")
       .attr("class", "cell")
-      .attr("x", (d, i) => (i % 5) * cellSize + 80)
-      .attr("y", (d, i) => Math.floor(i / 5) * cellSize + 30)
+      .attr("x", (d, i) => (i % 5) * cellSize + 120)
+      .attr("y", (d, i) => Math.floor(i / 5) * cellSize + 40)
       .attr("width", cellSize)
       .attr("height", cellSize)
-      .attr("fill", d => color(d));
+      .attr("fill", d => color(d))
+      .on("mouseover", function(event, d) {
+        tooltip.transition().duration(200).style("opacity", 1);
+        tooltip.html(`<strong>Score:</strong> ${d}<br>${explanations[d] || 'Review required.'}`)
+          .style("left", (event.pageX + 10) + "px")
+          .style("top", (event.pageY - 28) + "px");
+      })
+      .on("mouseout", function() {
+        tooltip.transition().duration(300).style("opacity", 0);
+      });
 
-    // Add cell text
-    svg.selectAll("g.text")
+    // Add cell text (score numbers)
+    svg.selectAll("text.cell-text")
       .data(riskMatrix.flat())
       .enter()
       .append("text")
-      .attr("x", (d, i) => (i % 5) * cellSize + 80 + cellSize / 2)
-      .attr("y", (d, i) => Math.floor(i / 5) * cellSize + 30 + cellSize / 2 + 5)
+      .attr("class", "cell-text")
+      .attr("x", (d, i) => (i % 5) * cellSize + 120 + cellSize / 2)
+      .attr("y", (d, i) => Math.floor(i / 5) * cellSize + 40 + cellSize / 2 + 5)
       .attr("text-anchor", "middle")
       .attr("fill", "#000")
       .text(d => d);
@@ -74,8 +138,8 @@
     severity.forEach((label, i) => {
       svg.append("text")
         .attr("class", "matrix-label")
-        .attr("x", i * cellSize + 80 + cellSize / 2)
-        .attr("y", 20)
+        .attr("x", i * cellSize + 120 + cellSize / 2)
+        .attr("y", 30)
         .attr("text-anchor", "middle")
         .text(label);
     });
@@ -84,22 +148,22 @@
     likelihood.forEach((label, i) => {
       svg.append("text")
         .attr("class", "matrix-label")
-        .attr("x", 70)
-        .attr("y", i * cellSize + 30 + cellSize / 2 + 5)
+        .attr("x", 110)
+        .attr("y", i * cellSize + 40 + cellSize / 2 + 5)
         .attr("text-anchor", "end")
         .text(label);
     });
 
-    // Add axis titles
+    // Axis titles
     svg.append("text")
-      .attr("x", width / 2 + 80)
-      .attr("y", height + 60)
+      .attr("x", width / 2 + 120)
+      .attr("y", height + 70)
       .attr("text-anchor", "middle")
       .style("font-weight", "bold")
-      .text("Severity of Impact");
+      .text("Severity of Social Impact");
 
     svg.append("text")
-      .attr("transform", `translate(20,${height / 2 + 30}) rotate(-90)`)
+      .attr("transform", `translate(40,${height / 2 + 40}) rotate(-90)`)
       .attr("text-anchor", "middle")
       .style("font-weight", "bold")
       .text("Likelihood of Occurrence");
