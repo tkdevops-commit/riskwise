@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-# takiing raw data from various scources - weighing each comonent to refelct its importance.
+# takiing raw data from various scources - weighing each comonent to refelct its importance
 data = {
     'likelihood': [3, 4, 2, 5, 4],   # scale 1–5
     'impact': [60, 80, 40, 90, 70],  # scale 0–100
