@@ -1,1 +1,198 @@
+PEST Analysis 
+
+PEST Analysis is a strategic tool used to assess the macro-environmental factors
+ 
+Political
+
+Two predominant areas of focus:
+1.	Political Stability
+2.	Degree of Government Intervention
+
+1. Political Stability
+
+To evaluate political stability, consider
+•	A functioning Government? Y/N
+•	Strength of institutions: Can they operate independently of political interference? Y/N
+•	Frequency of power transitions: Are elections regular, peaceful, and respected? Y/N
+*Excluding executive agnecies
+
+
+2. Government Intervention
+
+Assess both economic and regulatory intervention:
+•	Economic intervention: Includes taxation policies, tariffs, subsidies, privatisation/nationalisation.
+•	Regulatory intervention: Includes compliance obligations, anti-trust laws, labour/industrial relations legislation, and market entry controls.
+
+---
+ 
+Economic
+
+Evaluate core indicators, for algorthmtic simplicity a focussed on current state of the economy:
+• Unemployment rate - Partipation rates - Natural rate to be used to calculate a stable range of unemployment. 
+Typical stable range for developed economies 3-5% and 6-8% for developing countires. Y/N
+• GDP - measure the economic activity
+• Inflation rate - Stability of growth
+
+Evaluate other indicators such as:
+•	Domestic economic policy settings
+•	Trade agreements and openness
+•	Disposable income and cost of living
+•	Foreign Direct Investment (FDI)
+•	Consumer confidence
+•	Interest rates and inflation trends
+•	Market competition
+• Non-accelerating inflation rate of unemployment
+
+---
+
+ 
+Social
+
+Focus on workforce and societal trends:
+•	Availability of a skilled labour force
+•	Cultural attitudes and consumer behaviours
+•	Digital literacy and education levels
+•	Mobility and urbanisation
+
+Corruption Perceptions Index - Ranks countries on scale of 0 - 100 based on business and expert assessments. 
+
+
+---
+ 
+Technological
+
+Assess how well innovation and infrastructure are supported:
+•	Research and Development (R&D) output and funding
+•	Supporting infrastructure (e.g. internet, logistics, energy)
+•	Presence and maturity of local tech ecosystems
+•	National investment in emerging technologies
+
+Prediciting elemental change and potential causal change of events:
+
+Example:
+Tariffs -> change in cost -> output of production -> Employment and investment -> Consumer prices
+
+---
+
+ 
+Programmatic Assessment of Political Factors
+
+To evaluate PEST programmatically, combine recognised global indicators, scoring systems, and real-time data sources.
+
+
+- Political Factor:	How to Measure (Metric / Source)
+- Political Stability:	World Bank Political Stability Index, Fragile States Index, Global Peace Index
+- Corruption	Transparency: International’s Corruption Perceptions Index (CPI)
+- Government Effectiveness:	World Bank Government Effectiveness Indicator (Worldwide Governance Indicators)
+- Regulatory Quality:	World Bank Regulatory Quality Index
+- Rule of Law:	World Justice Project Rule of Law Index
+- Ease of Doing Business:	World Bank (historical) or Heritage Foundation’s Economic Freedom Index
+- Freedom of the Press:	Reporters Without Borders – World Press Freedom Index
+- Government Intervention:	Fraser Institute’s Economic Freedom Index; policy analysis (e.g. subsidies, nationalisation flags)
+- Bureaucracy: / Red Tape	World Bank reports, OECD, IMF business environment indicators
+- Policy Change or Reform:	Scraped from official government websites, gazettes, or policy feeds via APIs and legal databases
+
+Implementation Tips for App
+1.	Use recognised global indices (scored 0–100 or 0–10) to build a composite political score.
+→ Refer to a structured .json file for each country/region.
+2.	Integrate real-time data feeds:
+3.	Use governance indicators (e.g. World Bank APIs)
+4.	Scrape press releases or policy bulletins from official government websites
+5.	Monitor law or regulation databases using NLP where applicable
+
+Logistic Regression will help quantify between analysis simplfying output to binary.
+
+
+
+Logistic Regression Analysis for Probability Estimation
+
+Overview
+
+This project uses logistic regression to estimate the probability of events occurring based on structured and unstructured data, such as information scraped from government and industry sources.
+
+Logistic regression is a statistical method for binary classification — predicting whether something will happen (1) or not happen (0) — based on explanatory variables.
+Instead of producing direct “yes/no” outcomes, logistic regression outputs probabilities (0 to 1), allowing for more nuanced decision-making.
+
+⸻
+
+Purpose
+
+This analysis aims to:
+	•	Transform raw data (e.g., from PEST analysis inputs) into usable features.
+	•	Train a logistic regression model to predict the likelihood of an event occurring.
+	•	Provide decision-makers with probabilistic insights rather than vague predictions.
+
+Example:
+	•	Using economic indicators from government reports to estimate the probability of a market downturn.
+	•	Using policy announcements to predict the likelihood of a regulatory change within a year.
+
+⸻
+
+How It Works
+
+1. Data Collection (What)
+	•	Scrape relevant public data from government sites, reports, and APIs.
+	•	Clean, normalize, and structure the data into a feature set (numeric or categorical).
+
+2. Feature Engineering (Where)
+	•	Extract meaningful variables from PEST analysis factors:
+	•	Political: upcoming elections, policy changes.
+	•	Economic: interest rates, inflation, GDP trends.
+	•	Social: demographic shifts, consumer sentiment.
+	•	Technological: patent filings, innovation indices.
+
+3. Model Training (Why)
+	•	Train a logistic regression model on historical labeled data (events that happened vs. didn’t happen).
+	•	Learn the relationship between features and event likelihood.
+
+4. Prediction & Interpretation (How)
+	•	Input new or updated data into the model.
+	•	Receive probability scores for the event in question.
+	•	Use a probability threshold (e.g., >0.7) to classify as “likely.”
+
+Example workflow
+
+1. Data Input:
+
+interest_rate, gdp_growth, unemployment_rate, election_year, event_occurred
+3.0, 2.5, 4.1, 0, 1
+4.5, 1.2, 6.0, 1, 0
+
+2. Train Model:
+
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+3. Preddict:
+
+probability = model.predict_proba(new_data)[:, 1]
+
+4. Output:
+
+Probability of Event: 0.82 (Likely)
+
+Notes & Limitations
+	•	Logistic regression assumes a linear relationship between features and the log-odds of the event.
+	•	Requires clean and relevant data for reliable predictions.
+	•	Not suitable for complex, highly non-linear problems (consider other models if performance is poor).
+	•	Outputs are probabilities, not certainties — they should guide, not dictate, decisions.
+
+Core forumula which predicts the probability within the function
+
+P(Y=1) = \frac{1}{1 + e^{-(b_0 + b_1X_1 + b_2X_2 + \dots + b_nX_n)}}
+
+Where:
+	•	P(Y=1) = probability of “YES” (the outcome happening).
+	•	b_0 = intercept (baseline).
+	•	b_1, b_2, \dots, b_n = weights (decided during training).
+	•	X_1, X_2, \dots, X_n = input variables (the factors we use to predict).
+	•	e = Euler’s number (~2.718)
+
+Logistic regression threshold
+
+\text{If } P(Y=1) \geq 0.5 \text{ → Predict YES}
+\text{If } P(Y=1) < 0.5 \text{ → Predict NO}
+
+*Set benchmarks where there is limited historical data
 
