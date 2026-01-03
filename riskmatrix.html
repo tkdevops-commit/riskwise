@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Risk Matrix</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f4f4;
+      margin: 20px;
+    }
+    #matrix {
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    #matrix td {
+      width: 80px;
+      height: 80px;
+      border: 1px solid #aaa;
+      transition: transform 0.15s;
+      cursor: pointer;
+    }
+    #matrix td:hover {
+      transform: scale(1.15);
+      border-color: #333;
+    }
+    .labelY, .labelX {
+      font-weight: bold;
+      background: #ddd;
+    }
+    .score {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Interactive Risk Matrix</h2>
+<p>Click a cell to log the risk value (likelihood × impact).</p>
+
+<table id="matrix"></table>
+
+<script>
+  const rows = 5, cols = 5;
+  const matrix = document.getElementById("matrix");
+
+  // Color gradient function
+  function riskColor(score) {
+    const r = Math.min(255, Math.floor(51 * score));
+    const g = Math.min(255, Math.floor(255 - 25 * score));
+    const b = 50;
+    return `rgb(${r},${g},${b})`;
+  }
+
+  // Build headers
+  let headerRow = "<tr><td></td>";
+  for (let c = 1; c <= cols; c++) {
+    headerRow += `<td class="labelX">Impact ${c}</td>`;
+  }
+  matrix.innerHTML += headerRow + "</tr>";
+
+  for (let r = rows; r >= 1; r--) {
+    let tr = `<tr><td class="labelY">Likely ${r}</td>`;
+    for (let c = 1; c <= cols; c++) {
+      const score = r * c;
+      tr += `<td style="background:${riskColor(score)}" data-score="${score}">
+                <span class="score">${score}</span>
+             </td>`;
+    }
+    tr += "</tr>";
+    matrix.innerHTML += tr;
+  }
+
+  // Click event
+  matrix.addEventListener("click", function(e) {
+    if (e.target.dataset.score) {
+      alert("Risk score: " + e.target.dataset-score);
+    }
+  });
+</script>
+
+</body>
+</html>
