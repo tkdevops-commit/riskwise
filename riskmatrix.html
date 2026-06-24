@@ -1,87 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Risk Matrix</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f4f4f4;
-      margin: 20px;
-    }
-    #matrix {
-      border-collapse: collapse;
-      margin: 20px auto;
-    }
-    #matrix td {
-      width: 80px;
-      height: 80px;
-      border: 1px solid #aaa;
-      transition: transform 0.15s;
-      cursor: pointer;
-    }
-    #matrix td:hover {
-      transform: scale(1.15);
-      border-color: #333;
-    }
-    .labelY, .labelX {
-      font-weight: bold;
-      background: #ddd;
-    }
-    .score {
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #fff;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Organisational Risk Matrix</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    text-align:center;
+    margin:20px;
+}
+
+h2 {
+    margin-bottom:5px;
+}
+
+#matrix {
+    border-collapse:collapse;
+    margin:20px auto;
+}
+
+#matrix td {
+    width:90px;
+    height:90px;
+    border:1px solid #999;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+#matrix td:hover {
+    transform:scale(1.15);
+    border:2px solid black;
+}
+
+.header {
+    background:#ddd;
+    font-weight:bold;
+}
+
+.score {
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+}
+
+#details {
+    width:500px;
+    margin:20px auto;
+    background:white;
+    padding:15px;
+    border-radius:8px;
+    box-shadow:0 0 10px #aaa;
+    text-align:left;
+}
+
+input, select, textarea, button {
+
+    padding:8px;
+    margin:5px;
+
+}
+
+#register {
+
+    width:80%;
+    margin:auto;
+    border-collapse:collapse;
+
+}
+
+#register td, #register th {
+
+    border:1px solid #aaa;
+    padding:8px;
+
+}
+
+.legend {
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+
+}
+
+.box {
+
+    padding:10px;
+    color:white;
+    font-weight:bold;
+
+}
+
+</style>
+
 </head>
+
+
 <body>
 
-<h2>Interactive Risk Matrix</h2>
-<p>Click a cell to log the risk value (likelihood × impact).</p>
+
+<h2>Organisational Risk Matrix</h2>
+
+<p>
+Likelihood × Impact Assessment
+</p>
+
 
 <table id="matrix"></table>
 
+
+<div class="legend">
+
+<div class="box" style="background:#2ecc71">
+Low
+</div>
+
+<div class="box" style="background:#f1c40f">
+Medium
+</div>
+
+<div class="box" style="background:#e67e22">
+High
+</div>
+
+<div class="box" style="background:#e74c3c">
+Critical
+</div>
+
+</div>
+
+
+<div id="details">
+
+<h3>Risk Details</h3>
+
+<p id="output">
+Select a risk cell
+</p>
+
+</div>
+
+
+<h3>Add Risk</h3>
+
+
+<select id="category">
+
+<option>Culture</option>
+<option>Governance</option>
+<option>Compliance</option>
+<option>People</option>
+<option>Operational</option>
+<option>Reputation</option>
+
+</select>
+
+
+<input id="riskName" placeholder="Risk name">
+
+
+<textarea id="description" placeholder="Risk description"></textarea>
+
+
+<select id="likelihood">
+
+<option value="1">Likelihood 1</option>
+<option value="2">Likelihood 2</option>
+<option value="3">Likelihood 3</option>
+<option value="4">Likelihood 4</option>
+<option value="5">Likelihood 5</option>
+
+</select>
+
+
+<select id="impact">
+
+<option value="1">Impact 1</option>
+<option value="2">Impact 2</option>
+<option value="3">Impact 3</option>
+<option value="4">Impact 4</option>
+<option value="5">Impact 5</option>
+
+</select>
+
+
+<button onclick="addRisk()">
+Add Risk
+</button>
+
+
+
+<table id="register">
+
+<tr>
+<th>Category</th>
+<th>Risk</th>
+<th>Description</th>
+<th>Score</th>
+<th>Rating</th>
+</tr>
+
+</table>
+
+
+
 <script>
-  const rows = 5, cols = 5;
-  const matrix = document.getElementById("matrix");
 
-  // Color gradient function
-  function riskColor(score) {
-    const r = Math.min(255, Math.floor(51 * score));
-    const g = Math.min(255, Math.floor(255 - 25 * score));
-    const b = 50;
-    return `rgb(${r},${g},${b})`;
-  }
 
-  // Build headers
-  let headerRow = "<tr><td></td>";
-  for (let c = 1; c <= cols; c++) {
-    headerRow += `<td class="labelX">Impact ${c}</td>`;
-  }
-  matrix.innerHTML += headerRow + "</tr>";
+const rows = 5;
+const cols = 5;
 
-  for (let r = rows; r >= 1; r--) {
-    let tr = `<tr><td class="labelY">Likely ${r}</td>`;
-    for (let c = 1; c <= cols; c++) {
-      const score = r * c;
-      tr += `<td style="background:${riskColor(score)}" data-score="${score}">
-                <span class="score">${score}</span>
-             </td>`;
-    }
-    tr += "</tr>";
-    matrix.innerHTML += tr;
-  }
+const matrix = document.getElementById("matrix");
 
-  // Click event
-  matrix.addEventListener("click", function(e) {
-    if (e.target.dataset.score) {
-      alert("Risk score: " + e.target.dataset-score);
-    }
-  });
+let risks=[];
+
+
+function riskLevel(score){
+
+if(score>=20){
+return "Critical";
+}
+
+if(score>=12){
+return "High";
+}
+
+if(score>=6){
+return "Medium";
+}
+
+return "Low";
+
+}
+
+
+
+function riskColor(score){
+
+if(score>=20){
+return "#e74c3c";
+}
+
+if(score>=12){
+return "#e67e22";
+}
+
+if(score>=6){
+return "#f1c40f";
+}
+
+return "#2ecc71";
+
+}
+
+
+
+let header="<tr><td class='header'></td>";
+
+for(let c=1;c<=cols;c++){
+
+header+=
+`<td class="header">
+Impact ${c}
+</td>`;
+
+}
+
+header+="</tr>";
+
+matrix.innerHTML+=header;
+
+
+
+for(let r=rows;r>=1;r--){
+
+let row=
+`<tr>
+<td class="header">
+Likelihood ${r}
+</td>`;
+
+
+for(let c=1;c<=cols;c++){
+
+let score=r*c;
+
+
+row+=`
+
+<td 
+data-score="${score}"
+style="background:${riskColor(score)}">
+
+<span class="score">
+${score}
+</span>
+
+</td>
+
+`;
+
+}
+
+
+row+="</tr>";
+
+matrix.innerHTML+=row;
+
+}
+
+
+
+matrix.onclick=function(e){
+
+let cell=e.target.closest("td");
+
+
+if(cell && cell.dataset.score){
+
+
+let score=cell.dataset.score;
+
+
+document.getElementById("output").innerHTML=
+
+`
+Risk Score: ${score}<br>
+Rating: ${riskLevel(score)}
+`;
+
+}
+
+
+};
+
+
+
+function addRisk(){
+
+
+let category=
+document.getElementById("category").value;
+
+
+let name=
+document.getElementById("riskName").value;
+
+
+let desc=
+document.getElementById("description").value;
+
+
+let likelihood=
+Number(document.getElementById("likelihood").value);
+
+
+let impact=
+Number(document.getElementById("impact").value);
+
+
+let score=
+likelihood * impact;
+
+
+risks.push({
+
+category,
+name,
+desc,
+score
+
+});
+
+
+let table=
+document.getElementById("register");
+
+
+let row=
+table.insertRow();
+
+
+row.innerHTML=
+
+`
+
+<td>${category}</td>
+
+<td>${name}</td>
+
+<td>${desc}</td>
+
+<td>${score}</td>
+
+<td>${riskLevel(score)}</td>
+
+`;
+
+
+
+}
+
+
+
 </script>
 
+
 </body>
+
 </html>
