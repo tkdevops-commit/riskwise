@@ -12,7 +12,7 @@ What It Solves
 
 A risk matrix provides a simple, structured way to evaluate potential threats by considering both how likely they are and how severe their consequences could be. By mapping these two dimensions visually, users can quickly see which risks require immediate attention and which can be monitored or accepted.
 
-Copyright © 2026 Tristan Glen
+Copyright © 2026 Tristan Kahika
 
 Unless otherwise stated, the original content, documentation,
 designs, and source code contained in this repository are the
