@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101312">
+    <meta name="description" content="A personal launchpad for open source research tools and references.">
+    <title>Fieldnotes — OSINT workspace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#top" aria-label="Fieldnotes home">
+          <span class="brand-mark">F<span>·</span></span>
+          <span class="brand-name">fieldnotes<span>OSINT WORKSPACE</span></span>
+        </a>
+        <div class="side-label">WORKSPACE</div>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a class="nav-item active" href="#top"><span class="nav-icon">⌂</span> Overview <span class="nav-count">01</span></a>
+          <a class="nav-item" href="#tools"><span class="nav-icon">▦</span> Tool library <span class="nav-count" id="tool-count">—</span></a>
+          <button class="nav-item" id="favorites-filter"><span class="nav-icon">☆</span> Saved tools <span class="nav-count" id="saved-count">0</span></button>
+        </nav>
+        <div class="side-label category-label">CATEGORIES</div>
+        <nav class="category-nav" id="category-nav" aria-label="Tool categories"></nav>
+        <div class="sidebar-bottom">
+          <div class="status-dot"></div>
+          <div><strong>Personal workspace</strong><span>Links open in a new tab</span></div>
+          <span class="more">···</span>
+        </div>
+      </aside>
+
+      <main id="top">
+        <header class="topbar">
+          <div class="breadcrumb">Workspace <span>/</span> <strong>Overview</strong></div>
+          <div class="top-actions"><span class="today" id="today"></span><span class="avatar">FN</span></div>
+        </header>
+        <section class="intro">
+          <div class="eyebrow"><span class="eyebrow-line"></span> OPEN SOURCE RESEARCH</div>
+          <h1>Your research,<br><em>all in one place.</em></h1>
+          <p class="intro-copy">A considered collection of tools and resources for open source research. Pick a starting point and follow the evidence.</p>
+          <div class="search-wrap">
+            <span class="search-icon">⌕</span>
+            <input id="search" type="search" placeholder="Find a tool or category…" autocomplete="off" aria-label="Search tools">
+            <kbd>/</kbd>
+            <span class="search-hint">Search library</span>
+          </div>
+          <div class="quick-links"><span>QUICK ACCESS</span><a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Google Search ↗</a><a href="https://web.archive.org/" target="_blank" rel="noopener noreferrer">Wayback Machine ↗</a><a href="https://osintframework.com/" target="_blank" rel="noopener noreferrer">OSINT Framework ↗</a></div>
+        </section>
+
+        <section class="tools-section" id="tools">
+          <div class="section-heading"><div><div class="eyebrow small"><span class="eyebrow-line"></span> THE TOOLKIT</div><h2>Research tools <span id="result-count"></span></h2></div><div class="view-toggle" aria-label="View mode"><button class="view-button selected" aria-label="Grid view">▦</button><button class="view-button" aria-label="List view" disabled>☷</button></div></div>
+          <div id="tool-groups"></div>
+          <div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>No tools found</h3><p>Try another search or choose a different category.</p></div>
+        </section>
+        <footer><span>FIELDNOTES <i>·</i> A PERSONAL RESEARCH SPACE</span><span>Use tools responsibly and verify findings at the source.</span></footer>
+      </main>
+    </div>
+  </body>
+</html>
