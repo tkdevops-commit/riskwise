@@ -20,3 +20,5 @@ Then open <http://localhost:8000> in a browser. The page can also be opened dire
 - Labels the map as illustrative. It is a visual overview only; this page does not geolocate incidents or run a background collection service.
 
 Headlines are supplied by GDELT and link to their publishers. Treat them as leads and verify details with the original reporting. Feed access requires an internet connection and may be unavailable when the upstream service is down or blocks a request.
+
+The aim of this sub one point of contact OSINT tool is to compliment AI sourcing with human judgement. While AI can assist with data collection there is a difference between a plausible assessment and establishing a defensible finding. This tool emphasis the latter, incorporating human judgement, verification, intelligence gaps and trustworthiness of information to provide a clearer analysis. 
