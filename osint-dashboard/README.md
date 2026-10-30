@@ -1,6 +1,6 @@
 # Fieldnotes OSINT signal desk
 
-A small, browser based open source intelligence workspace inspired by live OSINT monitoring dashboards. The signal desk combines public GDELT headlines, topic watch areas, and a searchable/savable research tool library. It uses plain HTML, CSS, and JavaScript, with no build step or dependency install. OSINT fieldnotes is full offline capability requiring no backend dependencies  providing a strong security architecture.
+A small, browser based open source intelligence workspace inspired by live OSINT monitoring dashboards. The signal desk combines public GDELT headlines, topic watch areas, and a searchable/savable research tool library. It uses plain HTML, CSS, and JavaScript, with no build step or dependency install. OSINT fieldnotes can support full offline capability requiring no backend dependencies  providing a strong security architecture.
 
 ## Run locally
 
