@@ -13,3 +13,7 @@ What It Solves
 A risk matrix provides a simple, structured way to evaluate potential threats by considering both how likely they are and how severe their consequences could be. By mapping these two dimensions visually, users can quickly see which risks require immediate attention and which can be monitored or accepted.
 
 *Every effort has been made to appropriately acknowledge the respective owners of referenced works.
+
+## OSINT Dashboard
+
+[Open the OSINT dashboard](./osint-dashboard/)

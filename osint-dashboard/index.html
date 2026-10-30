@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#101312">
-    <meta name="description" content="A personal launchpad for open source research tools and references.">
-    <title>Fieldnotes — OSINT workspace</title>
+    <meta name="theme-color" content="#0b1115">
+    <meta name="description" content="A personal open source intelligence signal desk.">
+    <title>Fieldnotes — Signal desk</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,50 +15,123 @@
   <body>
     <div class="app-shell">
       <aside class="sidebar">
-        <a class="brand" href="#top" aria-label="Fieldnotes home">
-          <span class="brand-mark">F<span>·</span></span>
-          <span class="brand-name">fieldnotes<span>OSINT WORKSPACE</span></span>
-        </a>
-        <div class="side-label">WORKSPACE</div>
+        <a class="brand" href="#top" aria-label="Fieldnotes home"><span class="brand-mark">F<span>·</span></span><span class="brand-name">FIELDNOTES<span>OPEN SOURCE INTELLIGENCE</span></span></a>
+        <div class="side-label">MONITOR</div>
         <nav class="side-nav" aria-label="Main navigation">
-          <a class="nav-item active" href="#top"><span class="nav-icon">⌂</span> Overview <span class="nav-count">01</span></a>
-          <a class="nav-item" href="#tools"><span class="nav-icon">▦</span> Tool library <span class="nav-count" id="tool-count">—</span></a>
+          <a class="nav-item active" href="#top"><span class="nav-icon">◉</span> Signal desk <span class="live-pip"></span></a>
+          <a class="nav-item" href="#feed"><span class="nav-icon">≋</span> Global headlines</a>
+          <a class="nav-item" href="#tools"><span class="nav-icon">▦</span> Research tools <span class="nav-count" id="tool-count">—</span></a>
+          <button class="nav-item" id="open-investigation"><span class="nav-icon">▤</span> Investigation log <span class="nav-count" id="investigation-count">0</span></button>
           <button class="nav-item" id="favorites-filter"><span class="nav-icon">☆</span> Saved tools <span class="nav-count" id="saved-count">0</span></button>
+          <button class="nav-item" id="open-roster"><span class="nav-icon">◎</span> Puppets & agents <span class="nav-count" id="roster-count">0</span></button>
         </nav>
-        <div class="side-label category-label">CATEGORIES</div>
-        <nav class="category-nav" id="category-nav" aria-label="Tool categories"></nav>
-        <div class="sidebar-bottom">
-          <div class="status-dot"></div>
-          <div><strong>Personal workspace</strong><span>Links open in a new tab</span></div>
-          <span class="more">···</span>
-        </div>
+        <div class="side-label category-label">WATCH AREAS</div>
+        <nav class="watch-nav" aria-label="Watch areas">
+          <button class="watch-item selected" data-query="world"> <i class="watch-dot green"></i> World overview</button>
+          <button class="watch-item" data-query="conflict OR military"> <i class="watch-dot red"></i> Conflict & security</button>
+          <button class="watch-item" data-query="energy OR oil OR shipping"> <i class="watch-dot amber"></i> Energy & trade</button>
+          <button class="watch-item" data-query="cyberattack OR cybersecurity"> <i class="watch-dot blue"></i> Cyber</button>
+          <button class="watch-item" data-query="earthquake OR wildfire OR flood"> <i class="watch-dot violet"></i> Disasters</button>
+        </nav>
+        <div class="sidebar-bottom"><span class="status-dot"></span><div><strong>Local workspace</strong><span>No account required</span></div></div>
       </aside>
 
       <main id="top">
-        <header class="topbar">
-          <div class="breadcrumb">Workspace <span>/</span> <strong>Overview</strong></div>
-          <div class="top-actions"><span class="today" id="today"></span><span class="avatar">FN</span></div>
-        </header>
-        <section class="intro">
-          <div class="eyebrow"><span class="eyebrow-line"></span> OPEN SOURCE RESEARCH</div>
-          <h1>Your research,<br><em>all in one place.</em></h1>
-          <p class="intro-copy">A considered collection of tools and resources for open source research. Pick a starting point and follow the evidence.</p>
-          <div class="search-wrap">
-            <span class="search-icon">⌕</span>
-            <input id="search" type="search" placeholder="Find a tool or category…" autocomplete="off" aria-label="Search tools">
-            <kbd>/</kbd>
-            <span class="search-hint">Search library</span>
-          </div>
-          <div class="quick-links"><span>QUICK ACCESS</span><a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Google Search ↗</a><a href="https://web.archive.org/" target="_blank" rel="noopener noreferrer">Wayback Machine ↗</a><a href="https://osintframework.com/" target="_blank" rel="noopener noreferrer">OSINT Framework ↗</a></div>
+        <header class="topbar"><div class="breadcrumb">FIELDNOTES <span>/</span> <strong>SIGNAL DESK</strong></div><div class="top-actions"><span class="utc-clock" id="clock">--:--:-- UTC</span><span class="today" id="today"></span><button class="refresh-button" id="refresh" title="Refresh headlines">↻ <span>Refresh</span></button></div></header>
+        <section class="dashboard-intro">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> OPEN SOURCE MONITORING <span class="live-label"><i></i> LIVE VIEW</span></div><h1>Signal <em>desk</em></h1><p>Scan public reporting, follow developing stories, and move from signal to source.</p></div>
+          <div class="last-update"><span class="status-dot"></span><div><b id="feed-status">Connecting to GDELT</b><small id="updated-at">News data may take a moment to load</small></div></div>
         </section>
 
-        <section class="tools-section" id="tools">
-          <div class="section-heading"><div><div class="eyebrow small"><span class="eyebrow-line"></span> THE TOOLKIT</div><h2>Research tools <span id="result-count"></span></h2></div><div class="view-toggle" aria-label="View mode"><button class="view-button selected" aria-label="Grid view">▦</button><button class="view-button" aria-label="List view" disabled>☷</button></div></div>
-          <div id="tool-groups"></div>
-          <div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>No tools found</h3><p>Try another search or choose a different category.</p></div>
+        <section class="metric-row" aria-label="Desk summary">
+          <article class="metric-card"><span class="metric-label">ARTICLES IN VIEW</span><strong id="article-count">—</strong><small>Current query window</small></article>
+          <article class="metric-card"><span class="metric-label">WATCH AREA</span><strong class="metric-text" id="active-watch">WORLD</strong><small>Choose a watch area at left</small></article>
+          <article class="metric-card"><span class="metric-label">DATA SOURCE</span><strong class="metric-text">GDELT DOC 2.0</strong><small>Global news index · public API</small></article>
+          <article class="metric-card"><span class="metric-label">COLLECTION MODE</span><strong class="metric-text">ON DEMAND</strong><small>This page does not run a server sweep</small></article>
         </section>
-        <footer><span>FIELDNOTES <i>·</i> A PERSONAL RESEARCH SPACE</span><span>Use tools responsibly and verify findings at the source.</span></footer>
+
+        <section class="main-grid">
+          <article class="panel map-panel">
+            <div class="panel-heading"><div><span class="panel-kicker">GLOBAL OVERVIEW</span><h2>Areas of attention</h2></div><a href="https://www.gdeltproject.org/" target="_blank" rel="noopener noreferrer" class="source-link">ABOUT GDELT ↗</a></div>
+            <div class="map-visual" id="map-visual" aria-label="Decorative global map illustration. Activate to view full screen." role="button" tabindex="0">
+              <div class="map-grid"></div>
+              <svg viewBox="0 0 900 390" role="img" aria-label="Stylized world map with illustrative location markers">
+                <defs><radialGradient id="ocean"><stop stop-color="#142b32"/><stop offset="1" stop-color="#0e1a20"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                <rect width="900" height="390" fill="url(#ocean)"/>
+                <g class="land" opacity=".86"><path d="M90 103 136 72l60 8 33 25 52 5 31 26-18 25-36 8-18 29-37 9-11 41-25 17-20-22-2-31-31-18-16-39-35-19-15-32zM221 248l28 8 23 31-9 46-22 37-17-22-4-35-18-28zM381 105l36-20 52 3 23 20 52-4 45 15 19 24-25 13-27-8-15 24-41 3-19 28-23-7-6-34-31-15-27-3-15-18-38 1-18-16zM454 217l33-8 41 18 19 38-22 31-5 43-29 19-22-30 4-40-27-25zM589 127l39-27 63 5 37 20 42 2 29 23-17 20-51-3-21 22-41-8-13 23-27-12-10-29-32-6-26-16zM742 270l34-19 45 8 21 23-13 24-42 2-32-13z"/></g>
+                <g class="routes"><path d="M168 145 Q320 20 468 147 T716 154"/><path d="M468 147 Q420 230 461 289"/><path d="M240 166 Q360 240 461 289 T680 154"/></g>
+                <g class="map-points" filter="url(#glow)"><circle cx="168" cy="145" r="4"/><circle cx="468" cy="147" r="4"/><circle cx="716" cy="154" r="4"/><circle cx="461" cy="289" r="4"/><circle cx="240" cy="166" r="3"/><circle cx="680" cy="154" r="3"/></g>
+                <g class="map-labels"><text x="125" y="130">NORTH AMERICA</text><text x="425" y="128">EUROPE</text><text x="685" y="138">ASIA PACIFIC</text><text x="428" y="316">AFRICA</text></g>
+              </svg>
+              <span class="map-caption">Illustrative map · markers are not geolocated incident data</span>
+              <div class="map-legend"><span><i class="watch-dot green"></i> Monitoring</span><span><i class="watch-dot amber"></i> Developing</span><span><i class="watch-dot red"></i> Elevated</span></div>
+            </div>
+            <div class="state-times" aria-label="Current time in each Australian state">
+              <div class="state-times-heading"><span>AUSTRALIAN STATE TIMES</span><small>LIVE LOCAL TIME</small></div>
+              <div class="state-time-grid">
+                <div class="state-time"><b>Western Australia</b><time data-time-zone="Australia/Perth">--:--:--</time><small>Perth local time</small></div>
+                <div class="state-time"><b>South Australia</b><time data-time-zone="Australia/Adelaide">--:--:--</time><small>Adelaide local time</small></div>
+                <div class="state-time"><b>Queensland</b><time data-time-zone="Australia/Brisbane">--:--:--</time><small>Brisbane local time</small></div>
+                <div class="state-time"><b>New South Wales</b><time data-time-zone="Australia/Sydney">--:--:--</time><small>Sydney local time</small></div>
+                <div class="state-time"><b>Victoria</b><time data-time-zone="Australia/Melbourne">--:--:--</time><small>Melbourne local time</small></div>
+                <div class="state-time"><b>Tasmania</b><time data-time-zone="Australia/Hobart">--:--:--</time><small>Hobart local time</small></div>
+              </div>
+            </div>
+          </article>
+          <article class="panel watch-panel"><div class="panel-heading"><div><span class="panel-kicker">YOUR WATCHLIST</span><h2>Focus areas</h2></div><span class="panel-count">05 AREAS</span></div><div class="focus-list">
+            <button class="focus-row" data-query="conflict OR military"><span class="focus-icon red">⚑</span><span><b>Conflict & security</b><small>Conflict, military, diplomacy</small></span><span class="focus-arrow">↗</span></button>
+            <button class="focus-row" data-query="energy OR oil OR shipping"><span class="focus-icon amber">⌁</span><span><b>Energy & trade</b><small>Commodities, supply chains, shipping</small></span><span class="focus-arrow">↗</span></button>
+            <button class="focus-row" data-query="cyberattack OR cybersecurity"><span class="focus-icon blue">⌘</span><span><b>Cyber</b><small>Incidents, vulnerabilities, policy</small></span><span class="focus-arrow">↗</span></button>
+            <button class="focus-row" data-query="earthquake OR wildfire OR flood"><span class="focus-icon violet">⌁</span><span><b>Natural hazards</b><small>Earthquakes, fires, severe weather</small></span><span class="focus-arrow">↗</span></button>
+          </div><div class="watch-note">Select a focus area to search the public news index.</div></article>
+        </section>
+
+        <section class="panel feed-panel" id="feed"><div class="panel-heading feed-heading"><div><span class="panel-kicker">GLOBAL HEADLINES <span class="source-pill">GDELT</span></span><h2 id="feed-title">Latest reporting</h2></div><div class="feed-controls"><label class="sr-only" for="feed-search">Search news</label><input id="feed-search" type="search" placeholder="Search headlines…"><select id="feed-window" aria-label="Time range"><option value="24h">Past 24 hours</option><option value="48h">Past 48 hours</option><option value="7d">Past week</option></select></div></div><div id="feed-results" class="feed-results"><div class="loading-state"><span class="spinner"></span> Fetching public headlines…</div></div><div class="feed-foot"><span id="feed-attribution">Headlines and timestamps from GDELT. Verify details with the linked publisher.</span><button id="load-more" hidden>Load more results ↓</button></div></section>
+
+        <section class="tools-section" id="tools"><div class="section-heading"><div><div class="eyebrow small"><span class="eyebrow-line"></span> FIELD KIT</div><h2>Research tools <span id="result-count"></span></h2></div><div class="search-wrap compact"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="Find a tool…" autocomplete="off" aria-label="Search tools"><kbd>/</kbd></div></div><div class="library-layout"><nav class="category-nav" id="category-nav" aria-label="Tool categories"></nav><div id="tool-groups"></div></div><div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>No tools found</h3><p>Try another search or choose a different category.</p></div></section>
+        <footer><span>FIELDNOTES <i>·</i> PERSONAL RESEARCH SPACE</span><span>Open-source reporting is a starting point. Verify claims at the source.</span></footer>
       </main>
+    </div>
+    <div class="map-overlay" id="map-overlay" hidden>
+      <button class="map-close" id="map-close" type="button" aria-label="Close full-screen map">×</button>
+      <div class="map-fullscreen-content"></div>
+    </div>
+    <div class="note-overlay" id="note-overlay" hidden>
+      <section class="note-panel" role="dialog" aria-modal="true" aria-labelledby="note-title">
+        <header class="note-header"><div><span class="panel-kicker">FIELD RECORD</span><h2 id="note-title">Investigation log</h2></div><button class="note-close" id="close-investigation" aria-label="Close">×</button></header>
+        <div class="note-toolbar"><select id="record-select" aria-label="Saved investigations"><option value="">New investigation</option></select><button id="new-record" class="note-secondary">＋ New</button></div>
+        <form id="investigation-form">
+          <input type="hidden" id="record-id">
+          <label>Investigation title<input id="record-title" required placeholder="e.g. Verify public claim about…"></label>
+          <div class="note-grid"><label>Investigator identity<input id="investigator" placeholder="Name"></label><label>Credentials / role<input id="credentials" placeholder="Role, organization, relevant credentials"></label></div>
+          <label>Authorization and scope<textarea id="authorization" rows="3" placeholder="Who authorized this work, purpose, boundaries, exclusions, and approval reference"></textarea></label>
+          <label>Preliminary information provided<textarea id="preliminary" rows="3" placeholder="Briefing, claims, identifiers, dates, and supplied materials"></textarea></label>
+          <label>Methodologies and sources by stage<textarea id="methodology" rows="4" placeholder="Stage 1 — question, approach, sources, rationale&#10;Stage 2 — …"></textarea></label>
+          <label>Exact search terms, filters, and platform settings<textarea id="search-details" rows="3" placeholder="Queries, operators, date ranges, language, location, sort, account/settings"></textarea></label>
+          <label>Findings, negative results, and notifications<textarea id="findings" rows="4" placeholder="Record what was found, what was not found, alerts/notifications, and confidence"></textarea></label>
+          <div class="note-session"><div class="note-session-head"><b>Session timing</b><button type="button" class="note-secondary" id="session-toggle">▶ Start session</button></div><div class="note-grid"><label>Started<input id="session-start" type="datetime-local"></label><label>Ended<input id="session-end" type="datetime-local"></label></div><small id="session-duration">Duration is calculated from start and end.</small></div>
+          <div class="note-grid"><label>Evidence URL<input id="evidence-url" type="url" placeholder="https://…"></label><label>Screenshot / evidence file<input id="evidence-file" type="file" accept="image/*,.pdf,video/*"></label></div>
+          <div id="evidence-list" class="evidence-list"></div>
+          <div class="note-actions"><button type="button" class="note-danger" id="delete-record" hidden>Delete record</button><button type="submit" class="note-save">Save investigation</button></div>
+        </form>
+        <p class="note-local">Records and screenshot attachments stay in this browser on this device.</p>
+      </section>
+    </div>
+    <div class="note-overlay" id="roster-overlay" hidden>
+      <section class="note-panel roster-panel" role="dialog" aria-modal="true" aria-labelledby="roster-title">
+        <header class="note-header"><div><span class="panel-kicker">LOCAL WORKSPACE</span><h2 id="roster-title">Sock Puppets & agents</h2></div><button class="note-close" id="close-roster" aria-label="Close">×</button></header>
+        <p class="roster-intro">Keep research identities and AI assistants organized with a clear purpose, scope, and status.</p>
+        <div class="roster-toolbar"><span id="roster-summary">No entries</span><button id="add-roster-entry" class="note-secondary">＋ Add entry</button></div>
+        <div id="roster-list" class="roster-list"></div>
+        <form id="roster-form" class="roster-form" hidden>
+          <input type="hidden" id="roster-id">
+          <div class="note-grid"><label>Display name<input id="roster-name" required maxlength="60" placeholder="e.g. OSINT research assistant"></label><label>Type<select id="roster-type"><option value="Research persona">Research persona</option><option value="AI assistant">AI assistant</option><option value="Other">Other</option></select></label></div>
+          <label>Purpose and disclosure notes<textarea id="roster-purpose" rows="3" maxlength="500" placeholder="Intended research use, where the identity is disclosed, and any limits"></textarea></label>
+          <div class="note-grid"><label>Scope<input id="roster-scope" maxlength="120" placeholder="e.g. Public reporting review"></label><label>Status<select id="roster-status"><option>Ready</option><option>Paused</option><option>Archived</option></select></label></div>
+          <div class="note-actions"><button type="button" id="cancel-roster" class="note-secondary">Cancel</button><button type="submit" class="note-save">Save entry</button></div>
+        </form>
+        <p class="note-local">Entries are stored in this browser on this device. This roster does not create accounts or run agents.</p>
+      </section>
     </div>
   </body>
 </html>
